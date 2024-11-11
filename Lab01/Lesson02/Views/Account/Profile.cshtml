@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["title"] = "Profile";
+    var account = ViewBag.account;
+}
+
+<h2>Your profile</h2>
+<div class="row">
+    <div class="col-md-4">
+        <img src="@account.Avatar" />
+    </div>
+    <div class="col-md-8">
+        <h2>Full name: @account.Name</h2>
+        <h3>Email: @account.Email</h3>
+        <h3>Phone: @account.Phone</h3>
+        <h3>Address: @account.Address</h3>
+        <h3>
+            Gender:
+            @if (account.Gender == 1)
+            {
+                <span>Male</span>
+            }
+            else
+            {
+                <span>Female</span>
+            }
+        </h3>
+        <h3>Birthday: @account.Birthday</h3>
+        <p>
+            <a asp-area="" asp-controller="Account" asp-action="Index" class="btn btn-danger btn-sm">Back to list</a>
+        </p>
+    </div>
+</div>
+
