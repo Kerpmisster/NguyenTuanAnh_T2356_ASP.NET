@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    await Html.RenderPartialAsync("Banner");
+}
+<hr />
+<button id="loadAjax" class="btn btn-sm btn-primary">Click load book từ partialResult</button>
+<div id="data-from-ajax" class="row">Loading data...</div>
+<hr/>
+
+<h2>PopularBook Load từ BookComponent</h2>
+@await Component.InvokeAsync("Book")
+
+@section Scripts{
+    <script>
+        $('#loadAjax').click(function () {
+            $('#data-from-ajax').load("/Book/PopularBook")
+        })
+    </script>
+}

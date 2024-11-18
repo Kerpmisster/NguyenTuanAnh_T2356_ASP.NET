@@ -46,6 +46,7 @@ namespace Lesson02.Controllers
             ViewBag.Accounts = accounts;
             return View();
         }
+        [Route("ho-so-cua-toi", Name = "profile")]
         public IActionResult Profile(int id)
         {
             List<Account> accounts = new List<Account>

@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|d:\\dev2409gh-t2356\\nguyentuananh_t2356_asp.net\\myproject\\myproject\\areas\\customeruser\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|solutionrelative:myproject\\areas\\customeruser\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|d:\\dev2409gh-t2356\\nguyentuananh_t2356_asp.net\\myproject\\myproject\\areas\\customeruser\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|solutionrelative:myproject\\areas\\customeruser\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|d:\\dev2409gh-t2356\\nguyentuananh_t2356_asp.net\\myproject\\myproject\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|solutionrelative:myproject\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|d:\\dev2409gh-t2356\\nguyentuananh_t2356_asp.net\\myproject\\myproject\\areas\\customeruser\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|solutionrelative:myproject\\areas\\customeruser\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|d:\\dev2409gh-t2356\\nguyentuananh_t2356_asp.net\\myproject\\myproject\\areas\\customeruser\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF891D37-4108-4B72-B8D1-BE642DCCA047}|MyProject\\MyProject.csproj|solutionrelative:myproject\\areas\\customeruser\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "MyProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "MyProject\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-12T09:08:43.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Areas\\CustomerUser\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "MyProject\\Areas\\CustomerUser\\Views\\Login\\Index.cshtml",
+              "ToolTip": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Areas\\CustomerUser\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "MyProject\\Areas\\CustomerUser\\Views\\Login\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-12T08:58:10.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Areas\\CustomerUser\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "MyProject\\Areas\\CustomerUser\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Areas\\CustomerUser\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "MyProject\\Areas\\CustomerUser\\Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:55:47.362Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Areas\\CustomerUser\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "MyProject\\Areas\\CustomerUser\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Areas\\CustomerUser\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "MyProject\\Areas\\CustomerUser\\Controllers\\DashboardController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:47:10.786Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Areas\\CustomerUser\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "MyProject\\Areas\\CustomerUser\\Controllers\\BaseController.cs",
+              "ToolTip": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\MyProject\\MyProject\\Areas\\CustomerUser\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "MyProject\\Areas\\CustomerUser\\Controllers\\BaseController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T08:45:47.825Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

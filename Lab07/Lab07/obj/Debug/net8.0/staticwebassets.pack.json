@@ -1,0 +1,737 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Lab07.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Lab07.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\adminlte.css",
+      "PackagePath": "staticwebassets\\css\\adminlte.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\adminlte.css.map",
+      "PackagePath": "staticwebassets\\css\\adminlte.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\adminlte.min.css",
+      "PackagePath": "staticwebassets\\css\\adminlte.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\adminlte.min.css.map",
+      "PackagePath": "staticwebassets\\css\\adminlte.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.components.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.components.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.components.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.components.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.components.min.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.components.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.components.min.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.components.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.core.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.core.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.core.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.core.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.core.min.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.core.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.core.min.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.core.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.extra-components.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.extra-components.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.extra-components.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.extra-components.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.extra-components.min.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.extra-components.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.extra-components.min.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.extra-components.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.light.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.light.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.light.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.light.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.light.min.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.light.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.light.min.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.light.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.pages.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.pages.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.pages.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.pages.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.pages.min.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.pages.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.pages.min.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.pages.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.plugins.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.plugins.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.plugins.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.plugins.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.plugins.min.css",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.plugins.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\alt\\adminlte.plugins.min.css.map",
+      "PackagePath": "staticwebassets\\css\\alt\\adminlte.plugins.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\css\\animate.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\datepicker.css",
+      "PackagePath": "staticwebassets\\css\\datepicker.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\icofont.css",
+      "PackagePath": "staticwebassets\\css\\icofont.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\css\\nice-select.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\normalize.css",
+      "PackagePath": "staticwebassets\\css\\normalize.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\owl-carousel.css",
+      "PackagePath": "staticwebassets\\css\\owl-carousel.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\css\\responsive.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\slicknav.min.css",
+      "PackagePath": "staticwebassets\\css\\slicknav.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\icofont.eot",
+      "PackagePath": "staticwebassets\\fonts\\icofont.eot"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\icofont.svg",
+      "PackagePath": "staticwebassets\\fonts\\icofont.svg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\icofont.ttf",
+      "PackagePath": "staticwebassets\\fonts\\icofont.ttf"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\icofont.woff",
+      "PackagePath": "staticwebassets\\fonts\\icofont.woff"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\fonts\\icofont.woff2",
+      "PackagePath": "staticwebassets\\fonts\\icofont.woff2"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\AdminLTELogo.png",
+      "PackagePath": "staticwebassets\\img\\AdminLTELogo.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\about-img.jpg",
+      "PackagePath": "staticwebassets\\img\\about-img.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\author1.jpg",
+      "PackagePath": "staticwebassets\\img\\author1.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\author2.jpg",
+      "PackagePath": "staticwebassets\\img\\author2.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\author3.jpg",
+      "PackagePath": "staticwebassets\\img\\author3.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\blockqoute-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\blockqoute-bg.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\blog-sidebar1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog-sidebar1.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\blog-sidebar2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog-sidebar2.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\blog-sidebar3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog-sidebar3.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\blog1.jpg",
+      "PackagePath": "staticwebassets\\img\\blog1.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\blog2.jpg",
+      "PackagePath": "staticwebassets\\img\\blog2.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\blog3.jpg",
+      "PackagePath": "staticwebassets\\img\\blog3.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\bread-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\bread-bg.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\call-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\call-bg.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\client-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\client-bg.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\client1.png",
+      "PackagePath": "staticwebassets\\img\\client1.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\client2.png",
+      "PackagePath": "staticwebassets\\img\\client2.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\client3.png",
+      "PackagePath": "staticwebassets\\img\\client3.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\client4.png",
+      "PackagePath": "staticwebassets\\img\\client4.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\client5.png",
+      "PackagePath": "staticwebassets\\img\\client5.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\contact-img.png",
+      "PackagePath": "staticwebassets\\img\\contact-img.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\favicon.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\fun-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\fun-bg.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\map-marker.png",
+      "PackagePath": "staticwebassets\\img\\map-marker.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\mission-img.jpg",
+      "PackagePath": "staticwebassets\\img\\mission-img.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\pf1.jpg",
+      "PackagePath": "staticwebassets\\img\\pf1.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\pf2.jpg",
+      "PackagePath": "staticwebassets\\img\\pf2.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\pf3.jpg",
+      "PackagePath": "staticwebassets\\img\\pf3.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\pf4.jpg",
+      "PackagePath": "staticwebassets\\img\\pf4.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\section-img.png",
+      "PackagePath": "staticwebassets\\img\\section-img.png"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\signup-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\signup-bg.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\slider.jpg",
+      "PackagePath": "staticwebassets\\img\\slider.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\slider2.jpg",
+      "PackagePath": "staticwebassets\\img\\slider2.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\slider3.jpg",
+      "PackagePath": "staticwebassets\\img\\slider3.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\testi-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\testi-bg.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\user2-160x160.jpg",
+      "PackagePath": "staticwebassets\\img\\user2-160x160.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\video-bg.jpg",
+      "PackagePath": "staticwebassets\\img\\video-bg.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\.eslintrc.json",
+      "PackagePath": "staticwebassets\\js\\.eslintrc.json"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\adminlte.js",
+      "PackagePath": "staticwebassets\\js\\adminlte.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\adminlte.js.map",
+      "PackagePath": "staticwebassets\\js\\adminlte.js.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\adminlte.min.js",
+      "PackagePath": "staticwebassets\\js\\adminlte.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\adminlte.min.js.map",
+      "PackagePath": "staticwebassets\\js\\adminlte.min.js.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\bootstrap-datepicker.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap-datepicker.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\colors.js",
+      "PackagePath": "staticwebassets\\js\\colors.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\demo.js",
+      "PackagePath": "staticwebassets\\js\\demo.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\easing.js",
+      "PackagePath": "staticwebassets\\js\\easing.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\gmaps.min.js",
+      "PackagePath": "staticwebassets\\js\\gmaps.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\jquery-migrate-3.0.0.js",
+      "PackagePath": "staticwebassets\\js\\jquery-migrate-3.0.0.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\jquery.nav.js",
+      "PackagePath": "staticwebassets\\js\\jquery.nav.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\jquery.scrollUp.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.scrollUp.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\map-active.js",
+      "PackagePath": "staticwebassets\\js\\map-active.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\niceselect.js",
+      "PackagePath": "staticwebassets\\js\\niceselect.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\owl-carousel.js",
+      "PackagePath": "staticwebassets\\js\\owl-carousel.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\pages\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\pages\\dashboard.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\pages\\dashboard2.js",
+      "PackagePath": "staticwebassets\\js\\pages\\dashboard2.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\pages\\dashboard3.js",
+      "PackagePath": "staticwebassets\\js\\pages\\dashboard3.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\slicknav.min.js",
+      "PackagePath": "staticwebassets\\js\\slicknav.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\steller.js",
+      "PackagePath": "staticwebassets\\js\\steller.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\tilt.jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\tilt.jquery.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\js\\wow.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Lab07.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Lab07.props",
+      "PackagePath": "build\\Lab07.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Lab07.props",
+      "PackagePath": "buildMultiTargeting\\Lab07.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Lab07.props",
+      "PackagePath": "buildTransitive\\Lab07.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

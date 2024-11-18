@@ -1,0 +1,40 @@
+﻿@model Lesson03.Models.Book
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Thêm mới sách</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Title">Tên sách</label>
+        <input type="text" class="form-control" asp-for="Title" placeholder="Tên sách"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="AuthorId">Tác giả</label>
+        <input type="text" class="form-control" asp-for="AuthorId" placeholder="Tác giả" />
+    </div>
+    <div class="form-group">
+        <label asp-for="GenreId">Thể loại</label>
+        <select asp-for="GenreId" class="form-control" asp-items="@ViewBag.genres">
+            <option value="">Chọn thể loại</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price">Gía sách</label>
+        <input type="text" class="form-control" asp-for="Price" placeholder="Gía sách" />
+    </div>
+    <div class="form-group">
+        <label asp-for="TotalPage">Tổng số trang</label>
+        <input type="text" class="form-control" asp-for="TotalPage" placeholder="Tổng số trang" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Image">Ảnh</label>
+        <input type="file" class="form-control" asp-for="Image" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Sumary">Giới thiệu ngắn</label>
+        <input type="text" class="form-control" asp-for="Sumary" placeholder="Giới thiệu ngắn" />
+    </div>
+    <button type="submit" class="btn btn-primary">Lưu lại</button>
+</form>
+

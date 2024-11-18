@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Lesson03.Models.Book>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="img-thumbnail">
+                <img src="@Url.Content(item.Image)" alt="" width="100" />
+                <div class="caption-top">
+                    <h3>@item.Title</h3>
+                    <p>
+                        Price: @item.Price
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
