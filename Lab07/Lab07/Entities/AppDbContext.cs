@@ -10,5 +10,18 @@ namespace Lab07.Entities
         public DbSet<Product> Products { get; set; }
         public DbSet<Banner> Bans { get; set; }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Account> Account { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<Orders> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Category>()
+                .HasIndex(c => c.Name)
+                .IsUnique();
+            modelBuilder.Entity<OrderDetail>()
+                .HasIndex(c => new {c.OrderId,c.ProductId})
+                .IsUnique();
+        }
     }
 }

@@ -283,3 +283,12 @@ D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\bin\Debug\net8.0\runt
 D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\bin\Debug\net8.0\X.PagedList.dll
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\obj\Debug\net8.0\Lab07.MvcApplicationPartsAssemblyInfo.cs
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\bin\Debug\net8.0\Lab07.staticwebassets.endpoints.json
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\obj\Debug\net8.0\staticwebassets\msbuild.Lab07.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab07\Lab07\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

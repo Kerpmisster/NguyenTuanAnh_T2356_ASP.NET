@@ -6,15 +6,15 @@ namespace Lesson06.Models
     [Table("Category")]
     public class Category
     {
-        [Key]
+        //[Key]
         public int Id { get; set; }
-        [Required(ErrorMessage ="Cấm được để trống")]
-        [StringLength(100)]
-        [Column(TypeName ="nvarchar(100)")]
+        //[Required(ErrorMessage ="Cấm được để trống")]
+        //[StringLength(100)]
+        //[Column(TypeName ="nvarchar(100)")]
         public string Name { get; set; }
-        [Column(TypeName = "tinyint")]
-        public byte Status { get; set; }
-        public DateTime? CreatedDate { get; set; } = DateTime.Now;
+        //[Column(TypeName = "tinyint")]
+        public int Status { get; set; }
+        public DateTime? CreatedDate { get; set; }
         public ICollection<Product> Products { get; set;}
 
     }

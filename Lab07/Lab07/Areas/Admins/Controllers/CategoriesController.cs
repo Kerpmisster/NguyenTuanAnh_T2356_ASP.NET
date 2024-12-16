@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Lab07.Entities;
 using Lab07.Models;
+using X.PagedList;
 
 namespace Lab07.Areas.Admins.Controllers
 {
@@ -21,9 +22,21 @@ namespace Lab07.Areas.Admins.Controllers
         }
 
         // GET: Admins/Categories
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string name, int page = 1)
         {
-            return View(await _context.Categories.ToListAsync());
+            int limit = 5;
+            //List<Category> category;
+            //var category = await _context.Categories.ToListAsync();
+            var category = await _context.Categories.OrderBy(c=>c.Id)
+                .ToPagedListAsync(page, limit);
+            if (!String.IsNullOrEmpty(name))
+            {
+                category = await _context.Categories.Where(c=>c.Name.Contains(name))
+                    .OrderBy(c=>c.Id).ToPagedListAsync(page,limit);
+            }
+
+            ViewBag.keyword = name;
+            return View(category);
         }
 
         // GET: Admins/Categories/Details/5
@@ -57,13 +70,29 @@ namespace Lab07.Areas.Admins.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Status,CreatedDate,Image,Description")] Category category)
         {
-            if (ModelState.IsValid)
+            try
             {
+                var files = HttpContext.Request.Form.Files;
+                if (files.Count() > 0 && files[0].Length > 0)
+                {
+                    var file = files[0];
+                    var FileName = file.FileName;
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img\\category", FileName);
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                        category.Image = "/img/category/" + FileName;
+                    }
+                }
                 _context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+                return View(category);
+            }
         }
 
         // GET: Admins/Categories/Edit/5
@@ -98,8 +127,21 @@ namespace Lab07.Areas.Admins.Controllers
             {
                 try
                 {
+                    var files = HttpContext.Request.Form.Files;
+                    if (files.Count() > 0 && files[0].Length > 0)
+                    {
+                        var file = files[0];
+                        var FileName = file.FileName;
+                        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img\\category", FileName);
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            file.CopyTo(stream);
+                            category.Image = "/img/category/" + FileName;
+                        }
+                    }
                     _context.Update(category);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -109,11 +151,21 @@ namespace Lab07.Areas.Admins.Controllers
                     }
                     else
                     {
-                        throw;
+                        return View(category);
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
+            // Đưa ra lỗi của modelState để bạn có thể debug
+            var errorMessages = ModelState.Values.SelectMany(v => v.Errors)
+                                                  .Select(e => e.ErrorMessage)
+                                                  .ToList();
+            // Xem danh sách lỗi trong debug console hoặc log
+            foreach (var errorMessage in errorMessages)
+            {
+                Console.WriteLine(errorMessage);
+            }
+
+            // Trả về lại view với model và các lỗi
             return View(category);
         }
 

@@ -22,9 +22,7 @@ namespace Lesson06.Controllers
         // GET: Categories
         public async Task<IActionResult> Index()
         {
-            return _context.Categories != null ?
-                View(await _context.Categories.ToListAsync()) : 
-                Problem("Entity set 'AppDbContext.Categories' is null");
+            return View(await _context.Categories.ToListAsync());
         }
 
         // GET: Categories/Details/5
@@ -60,7 +58,6 @@ namespace Lesson06.Controllers
         {
             if (ModelState.IsValid)
             {
-                category.CreatedDate = DateTime.Now;
                 _context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -100,7 +97,6 @@ namespace Lesson06.Controllers
             {
                 try
                 {
-                    category.CreatedDate = DateTime.Now;
                     _context.Update(category);
                     await _context.SaveChangesAsync();
                 }

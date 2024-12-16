@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Lab07.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Lab07.bundle.scp.css"
+      "PackagePath": "staticwebassets\\Lab07.zlyfuvkema.bundle.scp.css"
     },
     {
       "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\css\\adminlte.css",
@@ -267,6 +267,18 @@
     {
       "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\call-bg.jpg",
       "PackagePath": "staticwebassets\\img\\call-bg.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\category\\prod-1.jpg",
+      "PackagePath": "staticwebassets\\img\\category\\prod-1.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\category\\prod-5.jpg",
+      "PackagePath": "staticwebassets\\img\\category\\prod-5.jpg"
+    },
+    {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\category\\user8-128x128.jpg",
+      "PackagePath": "staticwebassets\\img\\category\\user8-128x128.jpg"
     },
     {
       "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\img\\client-bg.jpg",
@@ -715,6 +727,10 @@
     {
       "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab07\\Lab07\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Lab07.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Lab07.Microsoft.AspNetCore.StaticWebAssets.props",

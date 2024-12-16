@@ -1,0 +1,12 @@
+﻿@font-face{
+    font-family: Gotham-Thin;
+    src: url(".../fonts/Gotham-Thin")
+}
+@font-face {
+    font-family: Gotham-Light;
+    src: url(".../fonts/Gotham-Light")
+}
+@font-face {
+    font-family: Gotham-Bold;
+    src: url(".../fonts/Gotham-Bold")
+}

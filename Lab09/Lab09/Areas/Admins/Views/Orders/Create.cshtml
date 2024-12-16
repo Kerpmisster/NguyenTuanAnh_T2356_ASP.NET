@@ -1,0 +1,88 @@
+﻿@model Lab09.Models.Order
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admins/Views/Shared/_Admin.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>Order</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdOrders" class="control-label"></label>
+                <select asp-for="IdOrders" class ="form-control" asp-items="ViewBag.IdOrders"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdCustomer" class="control-label"></label>
+                <input asp-for="IdCustomer" class="form-control" />
+                <span asp-validation-for="IdCustomer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdPayment" class="control-label"></label>
+                <input asp-for="IdPayment" class="form-control" />
+                <span asp-validation-for="IdPayment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OrdersDate" class="control-label"></label>
+                <input asp-for="OrdersDate" class="form-control" />
+                <span asp-validation-for="OrdersDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalMoney" class="control-label"></label>
+                <input asp-for="TotalMoney" class="form-control" />
+                <span asp-validation-for="TotalMoney" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Notes" class="control-label"></label>
+                <input asp-for="Notes" class="form-control" />
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NameReciver" class="control-label"></label>
+                <input asp-for="NameReciver" class="form-control" />
+                <span asp-validation-for="NameReciver" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Isdelete" class="control-label"></label>
+                <input asp-for="Isdelete" class="form-control" />
+                <span asp-validation-for="Isdelete" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Isactive" class="control-label"></label>
+                <input asp-for="Isactive" class="form-control" />
+                <span asp-validation-for="Isactive" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-success btn-sm" asp-action="Index">
+        <i class="fas fa-backward"></i>
+        Quay trở lại
+    </a>
+</div>
+

@@ -1,0 +1,155 @@
+﻿@model Lab09.Models.Product
+@using System.Text.RegularExpressions;
+
+@functions {
+    public string StripHtml(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        // Loại bỏ tất cả các thẻ HTML
+        return Regex.Replace(input, "<.*?>", string.Empty);
+    }
+    public string DecodeHtml(string input)
+    {
+        return System.Web.HttpUtility.HtmlDecode(input);
+    }
+    public string Truncate(string input, int maxLength)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        if (input.Length <= maxLength)
+            return input;
+
+        return input.Substring(0, maxLength) + "...";
+    }
+}
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/Admins/Views/Shared/_Admin.cshtml";
+}
+<div class="container mt-4">
+    <h4 class="text-primary">Chi tiết sản phẩm</h4>
+    <hr />
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Code)</th>
+                    <td>@Html.DisplayFor(model => model.Code)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Title)</th>
+                    <td>@Html.DisplayFor(model => model.Title)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Description)</th>
+                    <td>@Html.DisplayFor(model => model.Description)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Content)</th>
+                    <td>@Html.DisplayFor(model => model.Content)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Image)</th>
+                    <td>
+                        <img src="@Model.Image.Replace("/Images", "/Img")" alt="Product Image" class="img-thumbnail" width="100" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.MetaTitle)</th>
+                    <td>@Html.DisplayFor(model => model.MetaTitle)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.MetaKeyword)</th>
+                    <td>@Html.DisplayFor(model => model.MetaKeyword)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.MetaDescription)</th>
+                    <td>@Html.DisplayFor(model => model.MetaDescription)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Slug)</th>
+                    <td>@Html.DisplayFor(model => model.Slug)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.PriceOld)</th>
+                    <td>
+                        @String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", Model.PriceOld)
+                    </td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.PriceNew)</th>
+                    <td>
+                        @String.Format(new System.Globalization.CultureInfo("vi-VN"), "{0:C0}", Model.PriceNew)
+                    </td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Size)</th>
+                    <td>@Html.DisplayFor(model => model.Size)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Views)</th>
+                    <td>@Html.DisplayFor(model => model.Views)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Likes)</th>
+                    <td>@Html.DisplayFor(model => model.Likes)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Star)</th>
+                    <td>@Html.DisplayFor(model => model.Star)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Home)</th>
+                    <td>@Html.DisplayFor(model => model.Home)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Hot)</th>
+                    <td>@Html.DisplayFor(model => model.Hot)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.CreatedDate)</th>
+                    <td>@Html.DisplayFor(model => model.CreatedDate)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.UpdatedDate)</th>
+                    <td>@Html.DisplayFor(model => model.UpdatedDate)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.AdminCreated)</th>
+                    <td>@Html.DisplayFor(model => model.AdminCreated)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.AdminUpdated)</th>
+                    <td>@Html.DisplayFor(model => model.AdminUpdated)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Status)</th>
+                    <td>@Html.DisplayFor(model => model.Status)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Isdelete)</th>
+                    <td>@Html.DisplayFor(model => model.Isdelete)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.CidNavigation)</th>
+                    <td>@Html.DisplayFor(model => model.CidNavigation.Id)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@Model?.Id">
+        <i class="fas fa-edit"></i>
+        Chỉnh sửa
+    </a>
+    <a class="btn btn-success btn-sm" asp-action="Index">
+        <i class="fas fa-backward"></i>
+        Quay trở lại
+    </a>
+</div>

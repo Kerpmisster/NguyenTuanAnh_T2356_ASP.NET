@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Login information";
+    // Layout = "~/Views/Shared/_Main.cshtml";
+}
+<style>
+    form {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background: #ccc;
+        padding: 1rem;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2 class="text-center my-2 py-2">Thông tin đăng nhập</h2>
+        <form asp-action="Login" asp-controller="CustomerLogin" method="post">
+            <div class="mb-3">
+                <label for="UserOrEmail" class="form-label">Email/UserName</label>
+                <input type="text" class="form-control" id="UserOrEmail" name="UserOrEmail"
+                placeholder="..." />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password"/>
+            </div>  
+            <input type="hidden" name="urlAction" value="@ViewBag.UrlAction"/>
+            <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <h2 class="text-center my-2 py-2">Thông tin đăng ký</h2>
+        <form asp-action="Registy" asp-controller="CustomerLogin" method="post">
+            <div class="mb-3">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="Name" name="Name"
+                       placeholder="..." />
+            </div>
+            <div class="mb-3">
+                <label for="UserName" class="form-label">UserName</label>
+                <input type="text" class="form-control" id="UserName" name="UserName"
+                       placeholder="..." />
+            </div>
+            <div class="mb-3">
+                <label for="Email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="Email" name="Email"
+                       placeholder="..." />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" />
+            </div>
+            <input type="hidden" name="urlAction" value="@ViewBag.UrlAction" />
+            <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
+        </form>
+    </div>
+</div>
+
+

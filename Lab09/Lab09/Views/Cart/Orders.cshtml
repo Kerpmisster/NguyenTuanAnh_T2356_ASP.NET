@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Lab09.Models.Cart>
+@{
+    ViewData["Title"] = "Orders";
+    Layout = "~/Views/Shared/_Main.cshtml";
+    var customer = ViewBag.Customer as Lab09.Models.Customer;
+
+}
+<style>
+    .input-group-text{
+        width:100px !important;
+    }
+</style>
+<form asp-action="OrderPay" asp-controller="Cart" method="post">
+    <div class="row cart py-2">
+        <h2 class="text-center my-2 py-2">
+            ĐƠN HÀNG CỦA BẠN
+        </h2>
+        <div class="col-md-6">
+            <div class="border p-2">
+                <h2>THÔNG TIN NGƯỜI ĐẶT HÀNG</h2>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Name</span>
+                    <input type="text" class="form-control" readonly value="@customer.Name"/>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email</span>
+                    <input type="text" class="form-control" readonly value="@customer.Email" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Phone</span>
+                    <input type="text" class="form-control" readonly value="@customer.Phone" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Address</span>
+                    <textarea type="text" class="form-control" readonly aria-label="With textarea">@customer.Address</textarea> />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border p-2">
+                <h2>THÔNG TIN NGƯỜI NHẬN HÀNG</h2>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Name</span>
+                    <input type="text" class="form-control" value="@customer.Name" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email</span>
+                    <input type="text" class="form-control" value="@customer.Email" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Phone</span>
+                    <input type="text" class="form-control" value="@customer.Phone" />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Address</span>
+                    <textarea class="form-control" aria-label="With textarea">@customer.Address</textarea> />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Note</span>
+                    <textarea class="form-control" aria-label="Notes">@customer.Address</textarea> />
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Payment</span>
+                    <select name="IdPayment" class="form-control" asp-items="ViewBag.IdPayment"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
