@@ -1,4 +1,5 @@
 using Lab09.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using System;
 
@@ -13,6 +14,8 @@ namespace Lab09
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            //builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+            //.AddCookie();
             builder.Services.AddDbContext<DevXuongMocContext>(x => x.UseSqlServer(connectionString));
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddHttpContextAccessor();
@@ -38,7 +41,10 @@ namespace Lab09
             app.UseSession();
             app.UseRouting();
 
+            //app.UseAuthentication();
             app.UseAuthorization();
+
+            //app.MapDefaultControllerRoute();
 
             app.MapControllerRoute(
                 name: "areas",

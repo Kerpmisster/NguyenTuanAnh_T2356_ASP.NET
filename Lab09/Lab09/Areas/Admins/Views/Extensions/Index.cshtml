@@ -1,14 +1,51 @@
 ﻿@using X.PagedList.Mvc.Core
 @model X.PagedList.IPagedList<Lab09.Models.Extension>
+@using System.Text.RegularExpressions;
+
+@functions {
+    public string StripHtml(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        // Loại bỏ tất cả các thẻ HTML
+        return Regex.Replace(input, "<.*?>", string.Empty);
+    }
+    public string DecodeHtml(string input)
+    {
+        return System.Web.HttpUtility.HtmlDecode(input);
+    }
+    public string Truncate(string input, int maxLength)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        if (input.Length <= maxLength)
+            return input;
+
+        return input.Substring(0, maxLength) + "...";
+    }
+}
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Mở rộng";
     Layout = "~/Areas/Admins/Views/Shared/_Admin.cshtml";
     int index = (Model.PageNumber - 1) * Model.PageSize + 1; ;
 
 }
 
-<h1>Index</h1>
+<style>
+    input {
+        outline: none !important; /* Tắt outline */
+        border: none !important; /* Tắt border */
+        box-shadow: none !important; /* Tắt shadow nếu có */
+    }
+    input:focus::placeholder {
+        color: transparent;
+    }
+</style>
+
+<h1>Mở rộng</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-warning btn-sm">
@@ -27,19 +64,20 @@
         <i class="fas fa-search"></i> Tìm kiếm
     </button>
 </form>
-
+@if (Model.Any())
+{
 <table class="table">
     <thead>
         <tr>
-            <th>Số thứ tự</th>
-            <th>
+            <th class="text-center align-middle">Số thứ tự</th>
+            <th class="text-center align-middle">
                 @Html.DisplayNameFor(model => model.FirstOrDefault().Title)
             </th>
-            <th>
+            <th class="text-center align-middle">
                 @Html.DisplayNameFor(model => model.FirstOrDefault().Icon)
             </th>
             
-            <th>
+            <th class="text-center align-middle">
                 @Html.DisplayNameFor(model => model.FirstOrDefault().Status)
             </th>
 
@@ -47,39 +85,53 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
         <tr>
-            <td>
+                <td class="text-center align-middle">
                 @(index++)
             </td>
-            <td>
+                <td class="text-center align-middle">
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
-            <td>
+                <td class="text-center align-middle">
                 @Html.DisplayFor(modelItem => item.Icon)
-            </td>
+            </td class="text-center align-middle">
             
-            <td>
+            <td class="text-center align-middle">
                     @(item.Status == 1 ? "Có" : "Chưa")
             </td>
 
-            <td>
-                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id">
-                        <i class="fas fa-edit"></i>
+            <td class="text-center align-middle">
+                     <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id">
+                        <i class="fas fa-edit"></i> Sửa
                     </a>
                     <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id">
-                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-eye"></i> Chi tiết
                     </a>
                     <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">
-                        <i class="fas fa-trash-alt"></i>
+                        <i class="fas fa-trash-alt"></i> Xóa
                     </a>
             </td>
         </tr>
 }
     </tbody>
 </table>
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }), new X.PagedList.Web.Common.PagedListRenderOptions
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, name = ViewBag.keyword }), new X.PagedList.Web.Common.PagedListRenderOptions
 {
     LiElementClasses = new string[] { "page-item" },
     PageClasses = new string[] { "page-link" }
 })
+}
+else
+{
+    <div class="alert alert-danger text-center align-middle">
+        @if (string.IsNullOrEmpty(ViewBag.keyword))
+        {
+            <p>Không có sản phẩm nào trong danh sách hiện tại.</p>
+        }
+        else
+        {
+            <p>Không tìm thấy sản phẩm nào có từ: "<strong>@ViewBag.keyword</strong>".</p>
+        }
+    </div>
+}

@@ -42,7 +42,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(order);
+            return PartialView("_DetailsPartial", order);
         }
 
         // GET: Admins/Orders/Create

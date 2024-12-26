@@ -1,27 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Lab09.Models;
 
 public partial class AdminUser
 {
     public int Id { get; set; }
-    [Display(Name = "Tài khoản")]
+
     public string? Account { get; set; }
-    [Display(Name = "Mật khẩu")]
+
     public string? Password { get; set; }
 
     public int? MaNhanSu { get; set; }
-    [Display(Name = "Tên")]
+
     public string? Name { get; set; }
-    [Display(Name = "Số điện thoại")]
 
     public string? Phone { get; set; }
-    [Display(Name = "Email")]
 
     public string? Email { get; set; }
-    [Display(Name = "Avatar")]
 
     public string? Avatar { get; set; }
 

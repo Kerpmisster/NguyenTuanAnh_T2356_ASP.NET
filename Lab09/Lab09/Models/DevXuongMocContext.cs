@@ -719,9 +719,7 @@ public partial class DevXuongMocContext : DbContext
         {
             entity.ToTable("ORDERDETAILS");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("ID");
+            entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.IdOrder).HasColumnName("ID_ORDER");
             entity.Property(e => e.IdProduct).HasColumnName("ID_PRODUCT");
             entity.Property(e => e.Price)

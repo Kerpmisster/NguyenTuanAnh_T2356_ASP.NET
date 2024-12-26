@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<style>
+    input:focus::placeholder {
+        color: transparent;
+    }
+</style>
+
+<div class="box-content">
+    <div class="banner-page">
+        <div class="banner-page__image"><img src="img/anhcat/LIENHE.jpg" alt="đối tác"></div>
+        <div class="banner-page__title">
+            <img src="img/anhcat/logo3.png" alt="logo">
+            <p>LIÊN HỆ</p>
+        </div>
+    </div>
+    <div class="wrapper-box box-contact">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="thumbnail h-100">
+                    <img src="img/anhcat/sp2.jpg" alt="anh lien he" class="h-100 w-100">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="thumbnail">
+                    <p>liên hệ với chúng tôi</p>
+                    <form class="form" id="form">
+                        <div class="form-contact">
+                            <input type="text" id="username" name="username" placeholder="Họ tên" required="" value="@ViewBag.UserName">
+               
+                            <small></small>
+                        </div>
+                        <div class="form-contact">
+                            <input id="email" type="text" name="email" placeholder="Email" required="" value="@ViewBag.Email">
+                           
+                            <small></small>
+                        </div>
+                        <div class="form-contact">
+                            <input id="phone" type="text" name="phone" placeholder="Số điện thoại" required="" value="@ViewBag.Phone">
+                            
+                            <small></small>
+                        </div>
+                        <div class="form-contact">
+                            <input id="desc" type="text" name="description" placeholder="Nội dung" required="" value="">
+                            <small></small>
+                        </div>
+                        <button type="submit" class="box-contact__btn">
+                            Gửi
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -3,9 +3,25 @@
     ViewData["Title"] = "Registy";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="row">
-    <h2 class="text-center my-2 py-2">
-        Đăng ký thành công, đăng nhập để tiếp tục...
-    </h2>
+<div class="container text-center mt-5">
+    @if (TempData["successRegisty"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["successRegisty"]
+        </div>
+    }
+    @if (TempData["errorRegisty"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["errorRegisty"]
+        </div>
+    }
+
+    <p>Bạn sẽ được chuyển hướng về trang đăng nhập trong giây lát...</p>
 </div>
 
+<script>
+    setTimeout(function () {
+        window.location.href = '@Url.Action("Index", "CustomerLogin")';
+    }, 3000); // Chuyển hướng sau 3 giây
+</script>

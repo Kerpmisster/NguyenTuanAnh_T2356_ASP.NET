@@ -7,10 +7,13 @@ namespace Lab09.Models;
 public partial class Category
 {
     public int Id { get; set; }
-    [Display(Name ="Tiêu đề")]
+    [Display(Name = "Tiêu đề")]
+
     public string? Title { get; set; }
     [Display(Name = "Icon")]
+
     public string? Icon { get; set; }
+
     public string? MateTitle { get; set; }
 
     public string? MetaKeyword { get; set; }
@@ -23,10 +26,12 @@ public partial class Category
 
     public int? Parentid { get; set; }
     [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-    [Display(Name = "Ngày tạo")]
+    [Display(Name = "Thời gian tạo")]
+
     public DateTime? CreatedDate { get; set; }
     [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-    [Display(Name = "Ngày cập nhật")]
+    [Display(Name = "Thời gian sửa")]
+
     public DateTime? UpdatedDate { get; set; }
 
     public string? AdminCreated { get; set; }

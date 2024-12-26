@@ -1,0 +1,52 @@
+﻿@model Lab09.Models.News
+@using System.Text.RegularExpressions;
+
+@functions {
+    public string StripHtml(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        // Loại bỏ tất cả các thẻ HTML
+        return Regex.Replace(input, "<.*?>", string.Empty);
+    }
+    public string DecodeHtml(string input)
+    {
+        return System.Web.HttpUtility.HtmlDecode(input);
+    }
+}
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+<style>
+    p{
+        font-family: Gotham-Medium;
+    }
+	.h4, h4 {
+		margin-bottom: 2rem;
+	}
+
+		h4:after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 50%;
+			max-width: 10rem;
+			border-top: 0.35rem solid #bd945f;
+		}
+</style>
+
+<div class="box-content all-news">
+    <div class="box-news__content news-detail">
+        <h4>@Model.Title</h4>
+        <img src="@Url.Content(Model.Image).Replace("/Content/Uploads/images", "/img")" class="news-detail__image" alt="@Model.Title">
+        <p class="news-detail__desc">
+            @DecodeHtml(StripHtml(Model.Description))
+        </p>
+    </div>
+</div>
+

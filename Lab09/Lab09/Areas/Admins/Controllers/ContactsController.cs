@@ -48,8 +48,9 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
+            return PartialView("_DetailsPartial", contact);
 
-            return View(contact);
+            //return View(contact);
         }
 
         // GET: Admins/Contacts/Create

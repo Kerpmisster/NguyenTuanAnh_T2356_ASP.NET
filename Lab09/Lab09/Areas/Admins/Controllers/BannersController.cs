@@ -49,7 +49,9 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(banner);
+            //return View(banner);
+            return PartialView("_DetailsPartial", banner);
+
         }
 
         // GET: Admins/Banners/Create

@@ -15,22 +15,18 @@
                         <div class="box-cart-border-bottom d-flex justify-content-between align-items-center">
 
                             <div class="box-cart-item d-flex justify-content-start align-items-center">
-
-                                <img src="@item.Image.Replace("/Images", "/Img")" alt="@item.Name" class="box-cart-item-img" width="100px" />
-
+                                <img src="@item.Image.Replace("/Images", "/Img")" alt="@item.Name" class="box-cart-item-img" width="100" />
                                 <div class="d-flex flex-column">
                                     <h5>@item.Name</h5>
                                     <div class="box-cart-item-btn">
-
                                         <button class="btn qty_btn">
                                             <i class="fa fa-minus"></i> 
                                         </button>
                                         <input type="number" class="qty_input" value="@item.Quantity" />
 
                                         <button class="btn qty_btn">
-                                             <i class="fa fa-plus"></i> 
+                                            <i class="fa fa-plus"></i> 
                                         </button>
-
                                     </div>
                                     <p>
                                         Giá:
@@ -45,38 +41,41 @@
                                 </a>
 
                                 <a href="/cart/?id=@item.Id" data-id="@item.Id" data- qty="@item.Quantity"
-                                   class="btn update">Cập nhật</a>
+                                class="btn update">Cập nhật</a>
 
                             </div>
                         </div>
                     }
                 </div>
                 <div class="box-cart-bill">
-                    <h3> Tóm tắt đơn hàng </h3>
-                    <p>Tổng thành tiền:</p>
-                    <p>
-                        Phí vận chuyển: <span class="ship-money">Free Ship</span><br>
-                        <small>( Miễn phí vận chuyển với đơn hàng trên 10 triệu )</small>
-                    </p>
+                    @if (Model.Any())
+                    {
+                        <h3> Tóm tắt đơn hàng </h3>
+                        <p>Tổng thành tiền:</p>
+                        <p>
+                            Phí vận chuyển: <span class="ship-money">Free Ship</span><br>
+                            <small>( Miễn phí vận chuyển với đơn hàng trên 10 triệu )</small>
+                        </p>
 
-                    <p>
-                        Thông tin vận chuyển: Sản phẩm sẽ được Hoàng Hoan giao trong vòng
-                        2-7 ngày.
-                        Chi tiết liên hệ
-                        <a href="tel:0978611889">0978 611 889</a>
-                    </p>
-                    <div class="cart-box cart-layout">
-                        <div class="total-price">
-                            Tổng tiền :<span> 24.000.000&nbsp;VND</span>
+                        <p>
+                            Thông tin vận chuyển: Sản phẩm sẽ được Hoàng Hoan giao trong vòng
+                            2-7 ngày.
+                            Chi tiết liên hệ
+                            <a href="tel:0978611889">0978 611 889</a>
+                        </p>
+                        <div class="cart-box cart-layout">
+                            <div class="total-price">
+                                Tổng tiền :<span> 24.000.000&nbsp;VND</span>
+                            </div>
+
+                            <div class="group-btn">
+
+                                <a href="/cart/orders" class="btn">Đặt hàng ngay</a>
+                                <a asp-area="" asp-controller="Products" asp-action="Index" class="btn">Tiếp tục mua hàng</a>
+
+                            </div>
                         </div>
-
-                        <div class="group-btn">
-
-                            <a href="/cart/orders" class="btn">Đặt hàng ngay</a>
-                            <a asp-area="" asp-controller="Products" asp-action="Index" class="btn">Tiếp tục mua hàng</a>
-
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>

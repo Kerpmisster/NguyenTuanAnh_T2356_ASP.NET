@@ -25,7 +25,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\img\danh-muc\" />
     <Folder Include="wwwroot\img\Banner\" />
-    <Folder Include="wwwroot\img\tin-tuc\" />
+    <Folder Include="wwwroot\img\gioi-thieu\" />
   </ItemGroup>
 
 </Project>

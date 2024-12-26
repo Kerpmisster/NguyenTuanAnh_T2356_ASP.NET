@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Lab09.Models;
 using X.PagedList;
+using System.Text.RegularExpressions;
+using System.Web;
 
 namespace Lab09.Areas.Admins.Controllers
 {
@@ -19,6 +21,12 @@ namespace Lab09.Areas.Admins.Controllers
         {
             _context = context;
         }
+
+        //private string RemoveHtmlTagsAndDecode(string input)
+        //{
+        //    string withoutHtml = Regex.Replace(input, "<.*?>", string.Empty);
+        //    return HttpUtility.HtmlDecode(withoutHtml);
+        //}
 
         // GET: Admins/Products
         public async Task<IActionResult> Index(string name, int page = 1)
@@ -49,7 +57,6 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-
             //return View(product);
             return PartialView("_DetailsPartial", product);
 
@@ -59,7 +66,7 @@ namespace Lab09.Areas.Admins.Controllers
         public IActionResult Create()
         {
             ViewData["Cid"] = new SelectList(_context.Categories, "Id", "Title");
-            return View();
+            return PartialView("_Create");
         }
 
         // POST: Admins/Products/Create
@@ -110,8 +117,8 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-            ViewData["Cid"] = new SelectList(_context.Categories, "Id", "Id", product.Cid);
-            return View(product);
+            ViewData["Cid"] = new SelectList(_context.Categories, "Id", "Title", product.Cid);
+            return PartialView("_Edit", product);
         }
 
         // POST: Admins/Products/Edit/5
@@ -133,6 +140,9 @@ namespace Lab09.Areas.Admins.Controllers
                     var files = HttpContext.Request.Form.Files;
                     if (files.Count() > 0 && files[0].Length > 0)
                     {
+                        // Xử lý loại bỏ thẻ HTML và giải mã các ký tự HTML
+                        //product.Description = RemoveHtmlTagsAndDecode(product.Description);
+                        //product.Content = RemoveHtmlTagsAndDecode(product.Content);
                         var file = files[0];
                         var FileName = file.FileName;
                         var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img\\products", FileName);
@@ -159,6 +169,7 @@ namespace Lab09.Areas.Admins.Controllers
                 }
             }
             ViewData["Cid"] = new SelectList(_context.Categories, "Id", "Title", product.Cid);
+            //return PartialView("_Edit", product);
             return PartialView("_Edit", product);
         }
 
@@ -178,7 +189,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(product);
+            return PartialView("_Delete", product);
         }
 
         // POST: Admins/Products/Delete/5
@@ -205,5 +216,7 @@ namespace Lab09.Areas.Admins.Controllers
         //{
         //    return System.Web.HttpUtility.HtmlDecode(input);
         //}
+
+
     }
 }

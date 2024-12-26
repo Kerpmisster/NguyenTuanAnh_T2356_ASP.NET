@@ -1,0 +1,175 @@
+﻿@model Lab09.Models.Product
+
+<h1 class="text-center">Chỉnh sửa sản phẩm</h1>
+
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Thông tin sản phẩm</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                    <input type="hidden" asp-for="Id" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Cid" class="form-label"></label>
+                                <select asp-for="Cid" class="form-control" asp-items="ViewBag.Cid"></select>
+                                <span asp-validation-for="Cid" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Code" class="form-label"></label>
+                                <input asp-for="Code" class="form-control" />
+                                <span asp-validation-for="Code" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Title" class="form-label"></label>
+                                <input asp-for="Title" class="form-control" />
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Description" class="form-label"></label>
+                                <input asp-for="Description" class="form-control" />
+                                <span asp-validation-for="Description" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Content" class="form-label"></label>
+                                <input asp-for="Content" class="form-control" />
+                                <span asp-validation-for="Content" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Image" class="form-label"></label>
+                                <input asp-for="Image" class="form-control" type="file" />
+                                <span asp-validation-for="Image" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="MetaTitle" class="form-label"></label>
+                                <input asp-for="MetaTitle" class="form-control" />
+                                <span asp-validation-for="MetaTitle" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="MetaKeyword" class="form-label"></label>
+                                <input asp-for="MetaKeyword" class="form-control" />
+                                <span asp-validation-for="MetaKeyword" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="MetaDescription" class="form-label"></label>
+                                <input asp-for="MetaDescription" class="form-control" />
+                                <span asp-validation-for="MetaDescription" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Slug" class="form-label"></label>
+                                <input asp-for="Slug" class="form-control" />
+                                <span asp-validation-for="Slug" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="PriceOld" class="form-label"></label>
+                                <input asp-for="PriceOld" class="form-control" />
+                                <span asp-validation-for="PriceOld" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="PriceNew" class="form-label"></label>
+                                <input asp-for="PriceNew" class="form-control" />
+                                <span asp-validation-for="PriceNew" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label asp-for="Size" class="form-label"></label>
+                                <input asp-for="Size" class="form-control" />
+                                <span asp-validation-for="Size" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Views" class="form-label"></label>
+                                <input asp-for="Views" class="form-control" />
+                                <span asp-validation-for="Views" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Likes" class="form-label"></label>
+                                <input asp-for="Likes" class="form-control" />
+                                <span asp-validation-for="Likes" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Star" class="form-label"></label>
+                                <input asp-for="Star" class="form-control" />
+                                <span asp-validation-for="Star" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Home" class="form-label"></label>
+                                <input asp-for="Home" class="form-control" />
+                                <span asp-validation-for="Home" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Hot" class="form-label"></label>
+                                <input asp-for="Hot" class="form-control" />
+                                <span asp-validation-for="Hot" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="CreatedDate" class="form-label"></label>
+                                <input asp-for="CreatedDate" class="form-control" />
+                                <span asp-validation-for="CreatedDate" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="UpdatedDate" class="form-label"></label>
+                                <input asp-for="UpdatedDate" class="form-control" />
+                                <span asp-validation-for="UpdatedDate" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="AdminCreated" class="form-label"></label>
+                                <input asp-for="AdminCreated" class="form-control" />
+                                <span asp-validation-for="AdminCreated" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="AdminUpdated" class="form-label"></label>
+                                <input asp-for="AdminUpdated" class="form-control" />
+                                <span asp-validation-for="AdminUpdated" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Status" class="form-label"></label>
+                                <input asp-for="Status" class="form-control" />
+                                <span asp-validation-for="Status" class="text-danger"></span>
+                            </div>
+
+                            <div class="mb-3">
+                                <label asp-for="Isdelete" class="form-label"></label>
+                                <input asp-for="Isdelete" class="form-control" />
+                                <span asp-validation-for="Isdelete" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        <input type="submit" value="Lưu" class="btn btn-primary" />
+                        <a class="btn btn-secondary" asp-action="Index">
+                            <i class="fas fa-backward"></i> Quay trở lại
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

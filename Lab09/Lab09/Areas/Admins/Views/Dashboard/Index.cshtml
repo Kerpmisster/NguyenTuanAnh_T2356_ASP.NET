@@ -1,7 +1,13 @@
 ﻿@{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Trang quản trị";
     Layout = "~/Areas/Admins/Views/Shared/_Admin.cshtml";
 }
+
+<style>
+    h3, p ,.bg-warning>a{
+        color: white !important;
+    }
+</style>
 
 <div class="row">
     <div class="col-lg-3 col-6">
@@ -29,7 +35,7 @@
         </div>
     </div>
     <div class="col-lg-3 col-6">
-        <div class="small-box bg-warning    ">
+        <div class="small-box bg-warning">
             <div class="inner">
                 <h3>@ViewData["UserCount"] </h3>
                 <p>Khách hàng</p>
@@ -37,7 +43,7 @@
             <div class="icon">
                 <i class="ion ion-person-add"></i>
             </div>
-            <a href="~/admins/customers" class="small-box-footer">Thông tin thêm <i class="fas fa-arrow-circle-right"></i> </a>
+            <a href="~/admins/customers" class="small-box-footer" >Thông tin thêm <i class="fas fa-arrow-circle-right"></i> </a>
         </div>
     </div>
     <div class="col-lg-3 col-6">
@@ -49,7 +55,7 @@
             <div class="icon">
                 <i class="ion ion-pie-graph"></i>
             </div>
-            <a href="/admins/contacts" class="small-box-footer">Thông tin thêm <i class="fas fa-arrow-circle-right"></i> </a>
+            <a href="~/admins/contacts" class="small-box-footer">Thông tin thêm <i class="fas fa-arrow-circle-right"></i> </a>
         </div>
     </div>
 </div>

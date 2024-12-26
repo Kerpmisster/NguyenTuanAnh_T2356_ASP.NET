@@ -49,7 +49,9 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(adminUser);
+            //return View(adminUser);
+            return PartialView("_DetailsPartial", adminUser);
+
         }
 
         // GET: Admins/AdminUsers/Create

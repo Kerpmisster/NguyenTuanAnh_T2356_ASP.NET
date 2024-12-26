@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEFkbWluVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/AdminUsers/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEFkbWluVXNlcnNcX0RldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Banners/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJhbm5lcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -66,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Banners/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJhbm5lcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Banners/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJhbm5lcnNcX0RldGFpbHNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Categories/Create.cshtml]
@@ -276,8 +284,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Products/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RzXF9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Products/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RzXF9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Products/_DetailsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RzXF9EZXRhaWxzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Products/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXFByb2R1Y3RzXF9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Shared/_Admin.cshtml]
@@ -308,8 +328,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/Cart/OrderPay.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxPcmRlclBheS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/Cart/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxPcmRlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/CustomerLogin/Index.cshtml]
@@ -326,6 +354,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/Introduction/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50cm9kdWN0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/News/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/News/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/Partners/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFydG5lcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Views/Products/Details.cshtml]

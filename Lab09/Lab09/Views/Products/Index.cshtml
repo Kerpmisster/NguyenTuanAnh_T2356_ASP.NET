@@ -1,8 +1,8 @@
-﻿@model IEnumerable<Lab09.Models.Product>
+﻿@* @model IEnumerable<Lab09.Models.Product>
 
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Sản phẩm";
+    Layout = "~/Views/Shared/_Main.cshtml";
 }
 
 <h1>Sản phẩm</h1>
@@ -24,4 +24,90 @@
             </a>
         </div>
     }
+</div> *@
+
+@model IEnumerable<Lab09.Models.Category>
+
+@{
+    ViewData["Title"] = "Sản phẩm";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<style>
+    p{
+        font-family: Gotham-Medium;
+    }
+	.h4, h4 {
+		margin-bottom: 2rem;
+	}
+
+		h4:after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 50%;
+			max-width: 10rem;
+			border-top: 0.35rem solid #bd945f;
+		}
+</style>
+
+<div class="box-content all-product">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="margin-top:20px">
+        <div class="carousel-inner">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/img/anhcat/trai-nghiem1.jpg" alt="" width="1100"
+                         height="500">
+                    <div class="carousel-btn"><button class="btn-buy">Mua ngay</button></div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/img/anhcat/banner.jpg" alt="" width="1100" height="500">
+                    <div class="carousel-btn"><button class="btn-buy">Mua ngay</button></div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="all-product__item">
+        <div class="categories">
+            @foreach (var category in Model)
+            {
+                @if (category.Products != null && category.Products.Any())
+                {
+                    <div class="category">
+                        <h4>@category.Title</h4> <!-- Tên danh mục -->
+                        <div class="row bg-white">
+                            @foreach (var product in category.Products)
+                            {
+                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                    <div class="product-card">
+                                        <img src="@product.Image.Replace("/Images", "/Img")" alt="@product.Title" class="product-card-img" />
+                                        <div class="product-card-content">
+                                            <h6><a href="/product/@product.Id">@product.Title</a></h6>
+                                            <p class="old-price">@string.Format("{0:#,##0}", @product.PriceOld) VND</p>
+                                            <p class="new-price">@string.Format("{0:#,##0}", @product.PriceNew) VND</p>
+                                        </div>
+                                    </div>
+                                    <a asp-controller="Cart" asp-action="Add" asp-route-id="@product.Id" class="btn btn-success">
+                                        <i class="fi fi-bs-shopping-bag"> &nbsp; Mua hàng</i>
+                                    </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
 </div>
+
+

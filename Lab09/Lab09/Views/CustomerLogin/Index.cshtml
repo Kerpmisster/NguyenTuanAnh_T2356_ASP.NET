@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Lab09.Models.CustomerLogin
+@{
     ViewData["Title"] = "Login information";
     // Layout = "~/Views/Shared/_Main.cshtml";
 }
@@ -9,51 +10,173 @@
         background: #ccc;
         padding: 1rem;
     }
-</style>
 
-<div class="row">
-    <div class="col-md-6">
-        <h2 class="text-center my-2 py-2">Thông tin đăng nhập</h2>
-        <form asp-action="Login" asp-controller="CustomerLogin" method="post">
-            <div class="mb-3">
-                <label for="UserOrEmail" class="form-label">Email/UserName</label>
-                <input type="text" class="form-control" id="UserOrEmail" name="UserOrEmail"
-                placeholder="..." />
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password"/>
-            </div>  
-            <input type="hidden" name="urlAction" value="@ViewBag.UrlAction"/>
-            <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
-        </form>
-    </div>
-    <div class="col-md-6">
-        <h2 class="text-center my-2 py-2">Thông tin đăng ký</h2>
-        <form asp-action="Registy" asp-controller="CustomerLogin" method="post">
-            <div class="mb-3">
-                <label for="Name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="Name" name="Name"
-                       placeholder="..." />
-            </div>
-            <div class="mb-3">
-                <label for="UserName" class="form-label">UserName</label>
-                <input type="text" class="form-control" id="UserName" name="UserName"
-                       placeholder="..." />
-            </div>
-            <div class="mb-3">
-                <label for="Email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="Email" name="Email"
-                       placeholder="..." />
-            </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" />
-            </div>
-            <input type="hidden" name="urlAction" value="@ViewBag.UrlAction" />
-            <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
-        </form>
+    .input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        margin: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    input {
+        outline: none !important; /* Tắt outline */
+        border: none !important; /* Tắt border */
+        box-shadow: none !important; /* Tắt shadow nếu có */
+    }
+
+    input:focus::placeholder {
+        color: transparent;
+    }
+
+    .toggle-password {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+</style>
+<div class="box-content">
+    <div class="banner-page">
+        <div class="banner-page__image">
+            <img src="img/anhcat/GIOITHIEU.jpg" alt="">
+        </div>
+        <div class="banner-page__title">
+            <img src="img/anhcat/logo3.png" alt="">
+            <p>ĐĂNG NHẬP</p>
+        </div>
     </div>
 </div>
+<div class="container-fluid mt-3 mb-3">
+    <div class="row">
+        @if (TempData["successRegisty"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["successRegisty"]
+            </div>
+        }
+        @if (TempData["errorRegisty"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["errorRegisty"]
+            </div>
+        }
+
+        <div class="col-md-6 ">
+            <div class="card shadow">
+                <div class="card-header">
+                    <h2 class="card-title text-center">THÔNG TIN ĐĂNG NHẬP</h2>
+                </div>               
+                <div class="card-body">
+                    <form asp-action="Login" asp-controller="CustomerLogin" method="post">
+                        <div class="form-group position-relative mb-3">
+                            <label for="UserOrEmail" class="form-label">Email/UserName</label>
+                            <div class="input-group">
+                                <input type="text" asp-for="UserOrEmail" class="form-control" id="UserOrEmail" name="UserOrEmail"
+                                       placeholder="..." />
+                            </div>
+
+                        </div>
+                        <div class="form-group position-relative mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="toggle-password" onclick="togglePasswordVisibility()">
+                                        <i id="toggleIcon" class="fas fa-eye-slash"></i>
+                                    </span>
+                                </div>
+                                <input type="password" asp-for="Password" class="form-control" id="password" name="password" />
+
+                            </div>
+                        </div>
+                        <input type="hidden" name="urlAction" value="@ViewBag.UrlAction" />
+                        <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 ">
+            <div class="card shadow">
+                <div class="card-header">
+                    <h2 class="card-title text-center">THÔNG TIN ĐĂNG KÝ</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Registy" asp-controller="CustomerLogin" method="post">
+                        <div class="mb-3 form-group position-relative">
+                            <label for="Name" class="form-label">Name</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="Name" name="Name"
+                                       placeholder="..." required />
+                            </div>
+                        </div>
+                        <div class="mb-3 form-group position-relative">
+                            <label for="UserName" class="form-label">UserName</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="UserName" name="UserName"
+                                       placeholder="..." />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="Email" name="Email"
+                                       placeholder="..." />
+                            </div>
+                        </div>
+                        <div class="mb-3 form-group position-relative">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="toggle-password" onclick="togglePasswordVisibility1()">
+                                        <i id="toggleIcon1" class="fas fa-eye-slash"></i>
+                                    </span>
+                                </div>
+                                <input type="password" asp-for="Password" class="form-control" id="password1" name="password" />
+                            </div>
+                        </div>
+                        <input type="hidden" name="urlAction" value="@ViewBag.UrlAction" />
+                        <button type="submit" class="btn btn-primary btn-block">Đăng ký</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script>
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('password');
+        const toggleIcon = document.getElementById('toggleIcon');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+        }
+    }
+    function togglePasswordVisibility1() {
+        const passwordInput = document.getElementById('password1');
+        const toggleIcon = document.getElementById('toggleIcon1');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            toggleIcon.classList.remove('fa-eye-slash');
+            toggleIcon.classList.add('fa-eye');
+        } else {
+            passwordInput.type = 'password';
+            toggleIcon.classList.remove('fa-eye');
+            toggleIcon.classList.add('fa-eye-slash');
+        }
+    }
+</script>
+
 
 

@@ -1,0 +1,72 @@
+﻿@model NewsViewModel
+@using System.Text.RegularExpressions;
+
+@functions {
+    public string StripHtml(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        // Loại bỏ tất cả các thẻ HTML
+        return Regex.Replace(input, "<.*?>", string.Empty);
+    }
+    public string DecodeHtml(string input)
+    {
+        return System.Web.HttpUtility.HtmlDecode(input);
+    }
+}
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<div class="box-news">
+    <div id="map-link-bar">
+        <ul>
+            <li><a href="/">Trang chủ </a> > </li>
+            <li><a asp-controller="News" asp-action="Index">Tin tức</a></li>
+        </ul>
+    </div>
+    <div class="box-news__content">
+        <div class="row">
+            <div class="col-md-7 content-left">
+                <a href="@Url.Action("Detail", "News", new { id = Model.LatestNews.Id })">
+                    <div class="thumbnail-a">
+                        <p class="content-left__title">@Model.LatestNews.Title</p>
+                        <p>@DecodeHtml(StripHtml(Model.LatestNews.Description))</p>
+                        <img src="@Url.Content(Model.LatestNews.Image).Replace("/Content/Uploads/images", "/img")" class="card-img-top" alt="@Model.LatestNews.Title">
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-5 content-right">
+                <div class="thumbnail-a">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <h4>bài viết mới</h4>
+                        </div>
+                    </div>
+                    @foreach (var item in Model.OtherNews)
+                    {
+                        <div class="row fix-height">
+                            <div class="col-md-5">
+                                <a href="@Url.Action("Detail", "News", new { id = item.Id })">
+                                    <img src="@Url.Content(item.Image).Replace("/Content/Uploads/images", "/img")" class="card-img-top" alt="@item.Title" style="height: 150px; object-fit: cover;">
+                                </a>
+                            </div>
+                            <div class="col-md-7">
+                                <p class="content-right__title">
+                                    <a href="@Url.Action("Detail", "News", new { id = item.Id })">
+                                        @item.Title
+                                    </a>
+                                </p>
+                                <p><i class="fa-regular fa-clock"></i>&nbsp;@item.UpdatedDate?.ToString("dd/MM/yyyy")</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

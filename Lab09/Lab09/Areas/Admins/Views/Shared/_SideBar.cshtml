@@ -1,16 +1,31 @@
 ﻿﻿﻿@using Microsoft.AspNetCore.Http;
 @inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
+@{
+    var currentUrl = Context.Request.Path; // Lấy URL hiện tại
+    var isAccountManagerActive = currentUrl.StartsWithSegments("/admins/customers") || currentUrl.StartsWithSegments("/admins/AdminUsers");
+    var isCustomersActive = currentUrl.StartsWithSegments("/admins/customers");
+    var isAdminUsersActive = currentUrl.StartsWithSegments("/admins/AdminUsers");
+
+    var isProductManagerActive = currentUrl.StartsWithSegments("/admins/products") || currentUrl.StartsWithSegments("/admins/extensions") || currentUrl.StartsWithSegments("/admins/productimages") || currentUrl.StartsWithSegments("/admins/materials");
+    var isProductActive = currentUrl.StartsWithSegments("/admins/products");
+    var isExtensionsActive = currentUrl.StartsWithSegments("/admins/extensions");
+    var isProductImagesActive = currentUrl.StartsWithSegments("/admins/productimages");
+    var isMaterialsActive = currentUrl.StartsWithSegments("/admins/materials");
+
+    var isCategoriesActive = currentUrl.StartsWithSegments("/admins/categories");
+    var isBannersActive = currentUrl.StartsWithSegments("/admins/banners");
+    var isNewsActive = currentUrl.StartsWithSegments("/admins/news");
+    var isPartnersActive = currentUrl.StartsWithSegments("/admins/partners");
+    var isContactsActive = currentUrl.StartsWithSegments("/admins/contacts");
+}
+
+<aside class="main-sidebar sidebar-dark-primary shadow">
     <a href="~/admins" class="brand-link">
         <img src="~/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Quản trị hệ thống</span>
     </a>
-
-    <!-- Sidebar -->
     <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 <img src="~/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
@@ -25,26 +40,24 @@
                     }
                     else
                     {
-                        <a href="#" class="d-block">NguyenTuanAnh</a>
+                        <a href="~/admins" class="d-block">NguyenTuanAnh</a>
                     }
                 }
-
-
             </div>
         </div>
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="~/admins/dashboard" class="nav-link">
+                    <a href="~/admins" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
                             Bảng điều khiển
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item @((isAccountManagerActive ? "menu-open" : ""))">
+                    <a href="#" class="nav-link @((isAccountManagerActive ? "active" : ""))">
                         <i class="nav-icon fas fa-user-circle"></i>
                         <p>
                             Quản lý tài khoản
@@ -54,13 +67,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="~/admins/customers" class="nav-link">
+                            <a href="~/admins/customers" class="nav-link @((isCustomersActive ? "active" : ""))">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Người dùng</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="~/admins/AdminUsers" class="nav-link">
+                            <a href="~/admins/AdminUsers" class="nav-link @((isAdminUsersActive ? "active" : ""))">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Quản trị viên</p>
                             </a>
@@ -68,7 +81,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="~/admins/categories" class="nav-link">
+                    <a href="~/admins/categories" class="nav-link @((isCategoriesActive ? "active" : ""))">
                         <i class="nav-icon fas fa-list"></i>
                         <p>
                             Quản lý danh mục
@@ -76,45 +89,39 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="~/admins/banners" class="nav-link">
+                    <a href="~/admins/banners" class="nav-link @((isBannersActive ? "active" : ""))">
                         <i class="nav-icon fas fa-circle"></i>
                         <p>
                             Quản lý Banner
                         </p>
                     </a>
-
                 </li>
                 <li class="nav-item">
-                    <a href="/admins/news" class="nav-link">
+                    <a href="~/admins/news" class="nav-link @((isNewsActive ? "active" : ""))">
                         <i class="nav-icon fas fa-file-signature"></i>
                         <p>
                             Danh mục tin tức
                         </p>
                     </a>
-
                 </li>
                 <li class="nav-item">
-                    <a href="/admins/partners" class="nav-link">
+                    <a href="~/admins/partners" class="nav-link @((isPartnersActive ? "active" : ""))">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Quản lý đối tác
                         </p>
                     </a>
-
                 </li>
                 <li class="nav-item">
-                    <a href="/admins/contacts" class="nav-link">
+                    <a href="~/admins/contacts" class="nav-link @((isContactsActive ? "active" : ""))">
                         <i class="nav-icon fas fa-user-astronaut"></i>
                         <p>
                             Danh sách liên hệ
                         </p>
                     </a>
-
                 </li>
-
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
+                <li class="nav-item @((isProductManagerActive ? "menu-open" : ""))">
+                    <a href="#" class="nav-link @((isProductManagerActive ? "active" : ""))">
                         <i class="nav-icon fab fa-product-hunt"></i>
                         <p>
                             Quản lý sản phẩm
@@ -124,25 +131,25 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="~/admins/products" class="nav-link">
+                            <a href="~/admins/products" class="nav-link @((isProductActive ? "active" : ""))">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách sản phẩm</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="~/admins/extensions" class="nav-link">
+                            <a href="~/admins/extensions" class="nav-link @((isExtensionsActive ? "active" : ""))">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách mở rộng sản phẩm</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="~/admins/productimages" class="nav-link">
+                            <a href="~/admins/productimages" class="nav-link @((isProductImagesActive ? "active" : ""))">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách ảnh sản phẩm</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="~/admins/materials" class="nav-link">
+                            <a href="~/admins/materials" class="nav-link @((isMaterialsActive ? "active" : ""))">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Danh sách chất liệu sản phẩm</p>
                             </a>
@@ -152,7 +159,5 @@
 
             </ul>
         </nav>
-        <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
 </aside>

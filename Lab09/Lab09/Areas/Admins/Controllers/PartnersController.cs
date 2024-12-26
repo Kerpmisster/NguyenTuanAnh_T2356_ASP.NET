@@ -49,7 +49,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(partner);
+            return PartialView("_DetailsPartial", partner);
         }
 
         // GET: Admins/Partners/Create

@@ -49,7 +49,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(news);
+            return PartialView("_DetailsPartial", news);
         }
 
         // GET: Admins/News/Create

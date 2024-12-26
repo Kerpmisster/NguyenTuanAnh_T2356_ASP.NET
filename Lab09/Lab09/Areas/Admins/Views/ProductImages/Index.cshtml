@@ -1,11 +1,23 @@
 ﻿@model IEnumerable<Lab09.Models.ProductImage>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Ảnh";
     Layout = "~/Areas/Admins/Views/Shared/_Admin.cshtml";
 }
 
-<h1>Index</h1>
+<style>
+    input {
+        outline: none !important; /* Tắt outline */
+        border: none !important; /* Tắt border */
+        box-shadow: none !important; /* Tắt shadow nếu có */
+    }
+
+        input:focus::placeholder {
+            color: transparent;
+        }
+</style>
+
+<h1>Ảnh</h1>
 
 <p>
     <a asp-action="Create" class="btn btn-warning btn-sm">
@@ -28,10 +40,10 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+                <td class="text-center align-middle">
                 @Html.DisplayFor(modelItem => item.Image)
             </td>
-            <td>
+                <td class="text-center align-middle">
                 @Html.DisplayFor(modelItem => item.PidNavigation.Id)
             </td>
             <td>

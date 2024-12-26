@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Lab09.Models;
 using X.PagedList;
+using System.Reflection;
 
 namespace Lab09.Areas.Admins.Controllers
 {
@@ -48,8 +49,9 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
+            return PartialView("_DetailsPartial", category);
 
-            return View(category);
+            //return View(category);
         }
 
         // GET: Admins/Categories/Create
