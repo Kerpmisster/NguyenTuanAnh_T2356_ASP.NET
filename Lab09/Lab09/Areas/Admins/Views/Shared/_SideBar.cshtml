@@ -14,6 +14,7 @@
     var isMaterialsActive = currentUrl.StartsWithSegments("/admins/materials");
 
     var isCategoriesActive = currentUrl.StartsWithSegments("/admins/categories");
+    var isOrdersActive = currentUrl.StartsWithSegments("/admins/orders");
     var isBannersActive = currentUrl.StartsWithSegments("/admins/banners");
     var isNewsActive = currentUrl.StartsWithSegments("/admins/news");
     var isPartnersActive = currentUrl.StartsWithSegments("/admins/partners");
@@ -85,6 +86,14 @@
                         <i class="nav-icon fas fa-list"></i>
                         <p>
                             Quản lý danh mục
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="~/admins/orders" class="nav-link @((isOrdersActive ? "active" : ""))">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>
+                            Quản lý đơn hàng
                         </p>
                     </a>
                 </li>

@@ -22,12 +22,6 @@ namespace Lab09.Areas.Admins.Controllers
             _context = context;
         }
 
-        //private string RemoveHtmlTagsAndDecode(string input)
-        //{
-        //    string withoutHtml = Regex.Replace(input, "<.*?>", string.Empty);
-        //    return HttpUtility.HtmlDecode(withoutHtml);
-        //}
-
         // GET: Admins/Products
         public async Task<IActionResult> Index(string name, int page = 1)
         {
@@ -69,9 +63,6 @@ namespace Lab09.Areas.Admins.Controllers
             return PartialView("_Create");
         }
 
-        // POST: Admins/Products/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Cid,Code,Title,Description,Content,Image,MetaTitle,MetaKeyword,MetaDescription,Slug,PriceOld,PriceNew,Size,Views,Likes,Star,Home,Hot,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Status,Isdelete")] Product product)
@@ -121,9 +112,6 @@ namespace Lab09.Areas.Admins.Controllers
             return PartialView("_Edit", product);
         }
 
-        // POST: Admins/Products/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Cid,Code,Title,Description,Content,Image,MetaTitle,MetaKeyword,MetaDescription,Slug,PriceOld,PriceNew,Size,Views,Likes,Star,Home,Hot,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Status,Isdelete")] Product product)
@@ -140,9 +128,6 @@ namespace Lab09.Areas.Admins.Controllers
                     var files = HttpContext.Request.Form.Files;
                     if (files.Count() > 0 && files[0].Length > 0)
                     {
-                        // Xử lý loại bỏ thẻ HTML và giải mã các ký tự HTML
-                        //product.Description = RemoveHtmlTagsAndDecode(product.Description);
-                        //product.Content = RemoveHtmlTagsAndDecode(product.Content);
                         var file = files[0];
                         var FileName = file.FileName;
                         var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img\\products", FileName);
@@ -211,12 +196,5 @@ namespace Lab09.Areas.Admins.Controllers
         {
             return _context.Products.Any(e => e.Id == id);
         }
-
-        //public string DecodeHtml(string input)
-        //{
-        //    return System.Web.HttpUtility.HtmlDecode(input);
-        //}
-
-
     }
 }

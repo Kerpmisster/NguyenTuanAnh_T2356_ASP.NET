@@ -1,38 +1,8 @@
-﻿@* @model IEnumerable<Lab09.Models.Product>
-
+﻿@model IEnumerable<Lab09.Models.Category>
 @{
     ViewData["Title"] = "Sản phẩm";
     Layout = "~/Views/Shared/_Main.cshtml";
 }
-
-<h1>Sản phẩm</h1>
-
-<div class="row bg-white">
-    @foreach(var item in Model)
-    {
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="product-card">
-                <img src="@item.Image.Replace("/Images", "/Img")" alt="@item.Title" class="product-card-img" />
-                <div class="product-card-content"> 
-                    <h6><a href="/product/@item.Id">@item.Title</a></h6>
-                    <p class="old-price">@string.Format("{0:#,##0}",@item.PriceOld)VND</p>
-                    <p class="new-price">@string.Format("{0:#,##0}", @item.PriceNew)VND</p>
-                </div>
-            </div>
-            <a asp-controller="Cart" asp-action="Add" asp-route-id="@item.Id" class="btn btn-success">
-                <i class="fi fi-bs-shopping-bag"> &nbsp; Mua hàng</i>
-            </a>
-        </div>
-    }
-</div> *@
-
-@model IEnumerable<Lab09.Models.Category>
-
-@{
-    ViewData["Title"] = "Sản phẩm";
-    Layout = "~/Views/Shared/_Main.cshtml";
-}
-
 <style>
     p{
         font-family: Gotham-Medium;
@@ -40,6 +10,12 @@
 	.h4, h4 {
 		margin-bottom: 2rem;
 	}
+
+    .all-product__item--title h4:after {
+            transform: none;
+            left: 0;
+            border-top: 0.2rem solid #bd945f;
+    }
 
 		h4:after {
 			content: "";
@@ -77,37 +53,37 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="all-product__item">
-        <div class="categories">
-            @foreach (var category in Model)
-            {
-                @if (category.Products != null && category.Products.Any())
-                {
-                    <div class="category">
-                        <h4>@category.Title</h4> <!-- Tên danh mục -->
-                        <div class="row bg-white">
-                            @foreach (var product in category.Products)
-                            {
-                                <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <div class="product-card">
-                                        <img src="@product.Image.Replace("/Images", "/Img")" alt="@product.Title" class="product-card-img" />
-                                        <div class="product-card-content">
-                                            <h6><a href="/product/@product.Id">@product.Title</a></h6>
-                                            <p class="old-price">@string.Format("{0:#,##0}", @product.PriceOld) VND</p>
-                                            <p class="new-price">@string.Format("{0:#,##0}", @product.PriceNew) VND</p>
-                                        </div>
-                                    </div>
-                                    <a asp-controller="Cart" asp-action="Add" asp-route-id="@product.Id" class="btn btn-success">
-                                        <i class="fi fi-bs-shopping-bag"> &nbsp; Mua hàng</i>
-                                    </a>
+    @foreach (var category in Model)
+    {
+        @if (category.Products != null && category.Products.Any())
+        {
+            <div class="all-product__item">
+                <div class="all-product__item--title">
+                    <h4>@category.Title</h4> <!-- Tên danh mục -->
+                </div>
+                <div class="row bg-white">
+                    @foreach (var product in category.Products)
+                    {
+                        <div class="col-md-3 mb-3">
+                            <div class="product-card">
+                                <img src="@product.Image.Replace("/Images", "/Img")" alt="@product.Title" class="product-card-img" />
+                                <div class="product-card-content">
+                                    <h6><a href="/product/@product.Id">@product.Title</a></h6>
+                                    <p class="old-price">@string.Format("{0:#,##0}", @product.PriceOld) VND</p>
+                                    <p class="new-price">@string.Format("{0:#,##0}", @product.PriceNew) VND</p>
                                 </div>
-                            }
+                            </div>
+                            <div class="home-banner__btn">
+                                <a asp-controller="Cart" asp-action="Add" asp-route-id="@product.Id">
+                                    <i class="fi fi-bs-shopping-bag"> &nbsp; Mua hàng</i>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                }
-            }
-        </div>
-    </div>
+                    }
+                </div>
+            </div>
+        }
+    }
 </div>
 
 

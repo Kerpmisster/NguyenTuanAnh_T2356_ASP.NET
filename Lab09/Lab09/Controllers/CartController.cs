@@ -106,11 +106,7 @@ namespace Lab09.Controllers
                 var dataMember = JsonConvert.DeserializeObject<Customer>(HttpContext.Session.GetString("Member"));
                 ViewBag.Customer = dataMember;
 
-                float total = 0;
-                foreach (var item in carts) 
-                { 
-                    total += item.Quantity * item.Price;
-                }
+                float total = carts.Sum(item => item.Quantity * item.Price);
                 ViewBag.Total = total;
                 var dataPay = _context.PaymentMethods.ToList();
                 ViewData["IdPayment"] = new SelectList(dataPay, "Id", "Name", 1);

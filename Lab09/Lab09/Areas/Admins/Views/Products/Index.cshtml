@@ -49,7 +49,7 @@
 <h1>Danh sách sản phẩm</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-warning btn-sm">
+    <a class="btn btn-warning btn-sm btn-create" data-bs-toggle="modal" data-bs-target="#sharedModal">
         <i class="fas fa-plus"></i>
         Thêm mới
     </a>
@@ -65,7 +65,7 @@
         <i class="fas fa-search"></i> Tìm kiếm
     </button>
 </form>
-@if (Model.Any())
+@if (Model != null && Model.Any())
 {
 <table class="table">
     <thead>
@@ -111,22 +111,13 @@
                     @(item.Status == 1 ? "Có" : "Chưa")
             </td>
             <td class="text-center align-middle">
-                    @* <a class="btn btn-warning btn-sm btn-edit" asp-action="Edit" asp-route-id="@item.Id">
-                        <i class="fas fa-edit"></i> Sửa
-                    </a>
-                        <a class="btn btn-info btn-sm btn-details" data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#sharedModal">
-                        <i class="fas fa-eye"></i> Chi tiết
-                    </a>
-                    <a class="btn btn-danger btn-sm btn-delete" asp-action="Delete" asp-route-id="@item.Id">
-                        <i class="fas fa-trash-alt"></i> Xóa
-                    </a> *@
-                        <a class="btn btn-warning btn-sm btn-edit" asp-action="Edit" asp-route-id="@item.Id">
+                        <a class="btn btn-warning btn-sm btn-edit" data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#sharedModal">
                             <i class="fas fa-edit"></i> Sửa
                         </a>
                         <a class="btn btn-info btn-sm btn-details" data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#sharedModal">
                             <i class="fas fa-eye"></i> Chi tiết
                         </a>
-                        <a class="btn btn-danger btn-sm btn-delete" asp-action="Delete" asp-route-id="@item.Id">
+                        <a class="btn btn-danger btn-sm btn-delete" data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#sharedModal">
                             <i class="fas fa-trash-alt"></i> Xóa
                         </a>
             </td>
@@ -169,19 +160,6 @@ else
         }
     </div>
 }
-
-@* <div class="pagination-container">
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, name = ViewBag.keyword }), new PagedListRenderOptions
-{
-    DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
-    DisplayLinkToNextPage = PagedListDisplayMode.Always,
-    DisplayLinkToFirstPage = PagedListDisplayMode.Always,
-    DisplayLinkToLastPage = PagedListDisplayMode.Always,
-    DisplayItemSliceAndTotal = false,
-    MaximumPageNumbersToDisplay = 5
-})
-</div> *@
-
 <script>
     $(document).ready(function () {
         $('.btn-details').on('click', function () {
@@ -202,48 +180,54 @@ else
         });
 
         // Mở modal Thêm mới
-        $('#btn-create').click(function () {
-            $('#modal-title').text('Thêm sản phẩm mới');
-            $.get('/Admins/Products/Create', function (data) {
-                $('#modal-body').html(data);
-                $('#modal-action').modal('show');
+        $('.btn-create').on('click', function () {
+            $.ajax({
+                url: '/Admins/Products/Create',
+                type: 'GET',
+                success: function (response) {
+                    $('#modal-title').text('Tạo mới sản phẩm');
+                    $('#modalContent').html(response);
+                },
+                error: function () {
+                   alert('Không thể tải trang tạo sản phẩm.');
+                }
             });
         });
 
         // Mở modal Sửa
         $('.btn-edit').click(function () {
-            const id = $(this).data('id');
-            $('#modal-title').text('Chỉnh sửa sản phẩm');
-            $.get(`/Admins/Products/Edit/${id}`, function (data) {
-                $('#modal-body').html(data);
-                $('#modal-action').modal('show');
+            var id = $(this).data('id');
+            $.ajax({
+                url: '/Admins/Products/Edit/' + id,
+                type: 'PUT',
+                success: function (response) {
+                    $('#modal-title').text('Chỉnh sửa sản phẩm');
+                    $('#modalContent').html(response); // Chèn nội dung vào modal
+                },
+                error: function () {
+                    alert('Không thể tải trang chỉnh sửa sản phẩm.');
+                }
             });
         });
 
         // Mở modal Xóa
         $('.btn-delete').click(function () {
-            const id = $(this).data('id');
-            $('#modal-title').text('Xóa sản phẩm');
-            $.get(`/Admins/Products/Delete/${id}`, function (data) {
-                $('#modal-body').html(data);
-                $('#modal-action').modal('show');
-            });
+            var id = $(this).data('id'); // Lấy ID sản phẩm
+            // Gửi yêu cầu AJAX để lấy chi tiết sản phẩm
+            $.ajax({
+                url: '/Admins/Products/Delete/' + id,
+                type: 'DELETE',
+                success: function (response) {
+                     $('#modal-title').text('Xóa sản phẩm');
+                     $('#modalContent').html(response); // Chèn nội dung vào modal
+                },
+                error: function () {
+                     alert('Không thể tải trang xóa sản phẩm.');
+                }
+            });  
         });
 
-        // Lưu thay đổi
-        $('#btn-save').click(function () {
-            const form = $('#modal-body form');
-            const actionUrl = form.attr('action');
-            const formData = form.serialize();
-            $.post(actionUrl, formData, function (data) {
-                if (data.success) {
-                    $('#modal-action').modal('hide');
-                    location.reload(); // Tải lại trang
-                } else {
-                    $('#modal-body').html(data); // Hiển thị lỗi (nếu có)
-                }
-            });
-        });
+    
     });
     
 </script>

@@ -59,9 +59,6 @@ namespace Lab09.Areas.Admins.Controllers
             return View();
         }
 
-        // POST: Admins/Contacts/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Email,Phone,Address,Content,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Status,Isdelete")] Contact contact)

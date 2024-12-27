@@ -1,6 +1,7 @@
-﻿
+﻿@model Lab09.Models.Contact
+
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Liên hệ";
     Layout = "~/Views/Shared/_Main.cshtml";
 }
 
@@ -9,6 +10,19 @@
         color: transparent;
     }
 </style>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
 
 <div class="box-content">
     <div class="banner-page">
@@ -28,24 +42,26 @@
             <div class="col-md-6">
                 <div class="thumbnail">
                     <p>liên hệ với chúng tôi</p>
-                    <form class="form" id="form">
+                    <form asp-action="Index" method="post">
+                        @Html.AntiForgeryToken()
+
                         <div class="form-contact">
-                            <input type="text" id="username" name="username" placeholder="Họ tên" required="" value="@ViewBag.UserName">
+                            <input type="text" id="username" name="username" placeholder="Họ tên" required="" value="@Model.Title">
                
                             <small></small>
                         </div>
                         <div class="form-contact">
-                            <input id="email" type="text" name="email" placeholder="Email" required="" value="@ViewBag.Email">
+                            <input id="email" type="text" name="email" placeholder="Email" required="" value="@Model.Email">
                            
                             <small></small>
                         </div>
                         <div class="form-contact">
-                            <input id="phone" type="text" name="phone" placeholder="Số điện thoại" required="" value="@ViewBag.Phone">
+                            <input id="phone" type="text" name="phone" placeholder="Số điện thoại" required="" value="@Model.Phone">
                             
                             <small></small>
                         </div>
                         <div class="form-contact">
-                            <input id="desc" type="text" name="description" placeholder="Nội dung" required="" value="">
+                            <input id="desc" type="text" name="content" placeholder="Nội dung" required="" value="@Model.Content">
                             <small></small>
                         </div>
                         <button type="submit" class="box-contact__btn">
@@ -57,4 +73,7 @@
         </div>
     </div>
 </div>
+
+
+
 

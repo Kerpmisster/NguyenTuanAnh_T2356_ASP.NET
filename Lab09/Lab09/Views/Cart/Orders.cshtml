@@ -41,96 +41,108 @@
             @ViewBag.OrderSuccessMessage
         </div>
     }
-<form asp-action="OrderPay" asp-controller="Cart" method="post">
-    <div class="row cart py-2">
-        <h2 class="text-center my-2 py-2">
-            ĐƠN HÀNG CỦA BẠN
-        </h2>
-        <div class="col-md-6">
-            <div class="border p-2">
-                <h2>THÔNG TIN NGƯỜI ĐẶT HÀNG</h2>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Name</span>
-                    <input type="text" class="form-control" readonly value="@customer.Name" di/>
+<div class="container-fluid mt-3 mb-3"> 
+    <form asp-action="OrderPay" asp-controller="Cart" method="post">
+        <div class="row cart py-2">
+            <h2 class="text-center my-2 py-2">
+                ĐƠN HÀNG CỦA BẠN
+            </h2>
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h2 class="card-title text-center">THÔNG TIN NGƯỜI ĐẶT HÀNG</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Name</span>
+                            <input type="text" class="form-control" readonly value="@customer.Name" di />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Email</span>
+                            <input type="text" class="form-control" readonly value="@customer.Email" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Phone</span>
+                            <input type="text" class="form-control" readonly value="@customer.Phone" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Address</span>
+                            <textarea type="text" class="form-control" readonly aria-label="With textarea">@customer.Address</textarea>
+                        </div>
+                    </div>
                 </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Email</span>
-                    <input type="text" class="form-control" readonly value="@customer.Email" />
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Phone</span>
-                    <input type="text" class="form-control" readonly value="@customer.Phone" />
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Address</span>
-                    <textarea type="text" class="form-control" readonly aria-label="With textarea">@customer.Address</textarea> 
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h2 class="card-title text-center">THÔNG TIN NGƯỜI NHẬN HÀNG</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Name</span>
+                            <input type="text" class="form-control" value="@customer.Name" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Email</span>
+                            <input type="text" class="form-control" value="@customer.Email" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Phone</span>
+                            <input type="text" class="form-control" value="@customer.Phone" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Address</span>
+                            <textarea class="form-control" aria-label="With textarea">@customer.Address</textarea>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Note</span>
+                            <textarea class="form-control" aria-label="Notes">@customer.Address</textarea>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Payment</span>
+                            <select name="IdPayment" class="form-control" asp-items="ViewBag.IdPayment">
+                                <option value="0">Thanh toán khi nhận hàng</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="border p-2">
-                <h2>THÔNG TIN NGƯỜI NHẬN HÀNG</h2>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Name</span>
-                    <input type="text" class="form-control" value="@customer.Name" />
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Email</span>
-                    <input type="text" class="form-control" value="@customer.Email" />
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Phone</span>
-                    <input type="text" class="form-control" value="@customer.Phone" />
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Address</span>
-                    <textarea class="form-control" aria-label="With textarea">@customer.Address</textarea>
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Note</span>
-                    <textarea class="form-control" aria-label="Notes">@customer.Address</textarea> 
-                </div>
-                <div class="input-group mb-3">
-                    <span class="input-group-text">Payment</span>
-                    <select name="IdPayment" class="form-control" asp-items="ViewBag.IdPayment">
-                        <option value="0">Thanh toán khi nhận hàng</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr />
 
-    <div class="row cart cart">
-        <div class="col-md-12">
-            <h2 class="text-center my-4 py-2">THÔNG TIN SẢN PHẨM ĐẶT MUA</h2>
-            <div class="box-cart">
-                <div class="box-cart-item-box">
-                    @foreach (var item in Model)
-                    {
-                        var money = item.Price * item.Quantity;
-                        <div class="box-cart-border-bottom d-flex justify-content-between align-items-center mb-3">
-                            <div class="box-cart-item d-flex justify-content-start align-items-center">
-                                <img src="@item.Image.Replace("/Images", "/Img")" alt="@item.Name" class="box-cart-items-img" style="width:80px; height: 80px; object-fit: cover; border-radius: 8px;" />
-                                <div class="d-flex flex-column ms-3">
-                                    <h5 class="fw-bold">@item.Name</h5>
-                                    <p class="text-muted">Số lượng: @item.Quantity</p>
-                                    <p>Giá: <span class="fw-bold text-danger">@string.Format("{0:#,##0}", item.Price)</span> VND</p>
-                                    <p>Thành tiền: <span class="fw-bold text-success">@string.Format("{0:#,##0}", money)</span> VND</p>
+        <hr />
+
+        <div class="row cart cart">
+            <div class="col-md-12">
+                <h2 class="text-center my-4 py-2">THÔNG TIN SẢN PHẨM ĐẶT MUA</h2>
+                <div class="box-cart">
+                    <div class="box-cart-item-box">
+                        @foreach (var item in Model)
+                        {
+                            var money = item.Price * item.Quantity;
+                            <div class="box-cart-border-bottom d-flex justify-content-between align-items-center mb-3">
+                                <div class="box-cart-item d-flex justify-content-start align-items-center">
+                                    <img src="@item.Image.Replace("/Images", "/Img")" alt="@item.Name" class="box-cart-items-img" style="width:80px; height: 80px; object-fit: cover; border-radius: 8px;" />
+                                    <div class="d-flex flex-column ms-3">
+                                        <h5 class="fw-bold">@item.Name</h5>
+                                        <p class="text-muted">Số lượng: @item.Quantity</p>
+                                        <p>Giá: <span class="fw-bold text-danger">@string.Format("{0:#,##0}", item.Price)</span> VND</p>
+                                        <p>Thành tiền: <span class="fw-bold text-success">@string.Format("{0:#,##0}", money)</span> VND</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    }
+                        }
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="d-flex justify-content-end my-3">
-        <h4>Tổng tiền: <span id="totalMoneyPay" class="fw-bold text-primary">@string.Format("{0:#,##0}", ViewBag.total)</span> VND</h4>
-    </div>
+        <div class="d-flex justify-content-end my-3">
+            <h4>Tổng tiền: <span id="totalMoneyPay" class="fw-bold text-primary">@string.Format("{0:#,##0}", ViewBag.total)</span> VND</h4>
+        </div>
 
-    <div class="text-center py-3">
-        <button type="submit" class="btn btn-primary">Xác nhận đặt hàng</button>
-    </div>
-</form>
+        <div class="text-center py-3">
+            <button type="submit" class="btn btn-primary">Xác nhận đặt hàng</button>
+        </div>
+    </form>
+
+</div>
