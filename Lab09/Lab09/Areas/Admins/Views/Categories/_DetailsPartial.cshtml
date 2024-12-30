@@ -1,0 +1,86 @@
+﻿@model Lab09.Models.Category
+
+<h1>Chi tiết</h1>
+
+<div class="container mt-4">
+    <h4 class="text-primary text-center align-middle">Chi tiết danh mục</h4>
+    <hr />
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Title)</th>
+                    <td>@Html.DisplayFor(model => model.Title)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Icon)</th>
+                    <td>
+                        <img src="@Model.Icon.Replace("/Content/Uploads/images", "/img")" width="100" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.MateTitle)</th>
+                    <td>@Html.DisplayFor(model => model.MateTitle)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.MetaKeyword)</th>
+                    <td>@Html.DisplayFor(model => model.MetaKeyword)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.MetaDescription)</th>
+                    <td>@Html.DisplayFor(model => model.MetaDescription)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.MetaDescription)</th>
+                    <td>@Html.DisplayFor(model => model.MetaDescription)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Slug)</th>
+                    <td>@Html.DisplayFor(model => model.Slug)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Parentid)</th>
+                    <td>@Html.DisplayFor(model => model.Parentid)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.CreatedDate)</th>
+                    <td>@Html.DisplayFor(model => model.CreatedDate)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.UpdatedDate)</th>
+                    <td>@Html.DisplayFor(model => model.UpdatedDate)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.AdminCreated)</th>
+                    <td>@Html.DisplayFor(model => model.AdminCreated)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.AdminUpdated)</th>
+                    <td>@Html.DisplayFor(model => model.AdminUpdated)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Notes)</th>
+                    <td>@Html.DisplayFor(model => model.Notes)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Status)</th>
+                    <td>@Html.DisplayFor(model => model.Status)</td>
+                </tr>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Isdelete)</th>
+                    <td>@Html.DisplayFor(model => model.Isdelete)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@Model?.Id">
+        <i class="fas fa-edit"></i>
+        Chỉnh sửa
+    </a>
+    <a class="btn btn-success btn-sm" asp-action="Index">
+        <i class="fas fa-backward"></i>
+        Quay trở lại
+    </a>
+</div>

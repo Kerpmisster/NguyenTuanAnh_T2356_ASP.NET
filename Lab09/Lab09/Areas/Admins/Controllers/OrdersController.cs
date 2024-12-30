@@ -45,30 +45,6 @@ namespace Lab09.Areas.Admins.Controllers
             return PartialView("_DetailsPartial", order);
         }
 
-        // GET: Admins/Orders/Create
-        public IActionResult Create()
-        {
-            ViewData["IdOrders"] = new SelectList(_context.Customers, "Id", "Id");
-            return View();
-        }
-
-        // POST: Admins/Orders/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,IdOrders,IdCustomer,IdPayment,OrdersDate,TotalMoney,Notes,NameReciver,Address,Email,Phone,Isdelete,Isactive")] Order order)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(order);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["IdOrders"] = new SelectList(_context.Customers, "Id", "Id", order.IdOrders);
-            return View(order);
-        }
-
         // GET: Admins/Orders/Edit/5
         public async Task<IActionResult> Edit(long? id)
         {
@@ -83,12 +59,9 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
             ViewData["IdOrders"] = new SelectList(_context.Customers, "Id", "Id", order.IdOrders);
-            return View(order);
+            return PartialView("_Edit", order);
         }
 
-        // POST: Admins/Orders/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(long id, [Bind("Id,IdOrders,IdCustomer,IdPayment,OrdersDate,TotalMoney,Notes,NameReciver,Address,Email,Phone,Isdelete,Isactive")] Order order)
@@ -119,7 +92,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["IdOrders"] = new SelectList(_context.Customers, "Id", "Id", order.IdOrders);
-            return View(order);
+            return PartialView("_Edit", order);
         }
 
         // GET: Admins/Orders/Delete/5
@@ -138,7 +111,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(order);
+            return PartialView("_Delete", order);
         }
 
         // POST: Admins/Orders/Delete/5

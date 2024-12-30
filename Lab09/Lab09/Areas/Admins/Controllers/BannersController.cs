@@ -57,23 +57,36 @@ namespace Lab09.Areas.Admins.Controllers
         // GET: Admins/Banners/Create
         public IActionResult Create()
         {
-            return View();
+            return PartialView("_Create");
         }
 
-        // POST: Admins/Banners/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Image,Title,SubTitle,Urls,Orders,Type,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Notes,Status,Isdelete")] Banner banner)
         {
-            if (ModelState.IsValid)
+            try
             {
+                var files = HttpContext.Request.Form.Files;
+                if (files.Count() > 0 && files[0].Length > 0)
+                {
+                    var file = files[0];
+                    var FileName = file.FileName;
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img\\Banner", FileName);
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                        banner.Image = "/img/Banner/" + FileName;
+                    }
+                }
                 _context.Add(banner);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(banner);
+            catch (Exception ex)
+            {
+                ViewBag.error = ex.Message;
+            }
+            return PartialView("_Create", banner);
         }
 
         // GET: Admins/Banners/Edit/5
@@ -89,12 +102,9 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-            return View(banner);
+            return PartialView("_Edit", banner);
         }
 
-        // POST: Admins/Banners/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Image,Title,SubTitle,Urls,Orders,Type,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Notes,Status,Isdelete")] Banner banner)
@@ -108,8 +118,21 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 try
                 {
+                    var files = HttpContext.Request.Form.Files;
+                    if (files.Count() > 0 && files[0].Length > 0)
+                    {
+                        var file = files[0];
+                        var FileName = file.FileName;
+                        var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img\\Banner", FileName);
+                        using (var stream = new FileStream(path, FileMode.Create))
+                        {
+                            file.CopyTo(stream);
+                            banner.Image = "/img/Banner/" + FileName;
+                        }
+                    }
                     _context.Update(banner);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -122,9 +145,8 @@ namespace Lab09.Areas.Admins.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
             }
-            return View(banner);
+            return PartialView("_Edit", banner);
         }
 
         // GET: Admins/Banners/Delete/5
@@ -142,7 +164,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(banner);
+            return PartialView("_Delete", banner);
         }
 
         // POST: Admins/Banners/Delete/5

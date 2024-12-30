@@ -49,7 +49,7 @@
 <h1>Tin tức</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-warning btn-sm">
+    <a class="btn btn-warning btn-sm btn-create" data-bs-toggle="modal" data-bs-target="#sharedModal">
         <i class="fas fa-plus"></i>
         Thêm mới
     </a>
@@ -111,20 +111,34 @@
                 @Html.DisplayFor(modelItem => item.Status)
             </td> *@
             <td class="text-center align-middle">
-                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@item.Id">
-                        <i class="fas fa-edit"></i> Sửa
-                    </a>
-                    <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@item.Id">
-                        <i class="fas fa-eye"></i> Chi tiết
-                    </a>
-                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@item.Id">
-                        <i class="fas fa-trash-alt"></i> Xóa
-                    </a>
+                        <a class="btn btn-warning btn-sm btn-edit" data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#sharedModal">
+                            <i class="fas fa-edit"></i> Sửa
+                        </a>
+                        <a class="btn btn-info btn-sm btn-details" data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#sharedModal">
+                            <i class="fas fa-eye"></i> Chi tiết
+                        </a>
+                        <a class="btn btn-danger btn-sm btn-delete" data-id="@item.Id" data-bs-toggle="modal" data-bs-target="#sharedModal">
+                            <i class="fas fa-trash-alt"></i> Xóa
+                        </a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+<div class="modal fade" id="sharedModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Nội dung sẽ được tải động -->
+                    <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+</div>
 @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page, name = ViewBag.keyword }), new X.PagedList.Web.Common.PagedListRenderOptions
 {
     LiElementClasses = new string[] { "page-item" },
@@ -144,3 +158,71 @@ else
         }
     </div>
 }
+<script>
+    $(document).ready(function () {
+        $('.btn-details').on('click', function () {
+            var id = $(this).data('id'); // Lấy ID sản phẩm
+
+            // Gửi yêu cầu AJAX để lấy chi tiết sản phẩm
+            $.ajax({
+                url: '/Admins/News/Details/' + id,
+                type: 'GET',
+                success: function (response) {
+                    $('#modal-title').text('Chi tiết sản phẩm');
+                    $('#modalContent').html(response); // Chèn nội dung vào modal
+                },
+                error: function () {
+                    alert('Không thể tải chi tiết sản phẩm.');
+                }
+            });
+        });
+
+        // Mở modal Thêm mới
+        $('.btn-create').on('click', function () {
+            $.ajax({
+                url: '/Admins/News/Create',
+                type: 'GET',
+                success: function (response) {
+                    $('#modal-title').text('Tạo mới sản phẩm');
+                    $('#modalContent').html(response);
+                },
+                error: function () {
+                   alert('Không thể tải trang tạo sản phẩm.');
+                }
+            });
+        });
+
+        // Mở modal Sửa
+        $('.btn-edit').click(function () {
+            var id = $(this).data('id');
+            $.ajax({
+                url: '/Admins/News/Edit/' + id,
+                type: 'PUT',
+                success: function (response) {
+                    $('#modal-title').text('Chỉnh sửa sản phẩm');
+                    $('#modalContent').html(response); // Chèn nội dung vào modal
+                },
+                error: function () {
+                    alert('Không thể tải trang chỉnh sửa sản phẩm.');
+                }
+            });
+        });
+
+        // Mở modal Xóa
+        $('.btn-delete').click(function () {
+            var id = $(this).data('id'); // Lấy ID sản phẩm
+            // Gửi yêu cầu AJAX để lấy chi tiết sản phẩm
+            $.ajax({
+                url: '/Admins/News/Delete/' + id,
+                type: 'DELETE',
+                success: function (response) {
+                     $('#modal-title').text('Xóa sản phẩm');
+                     $('#modalContent').html(response); // Chèn nội dung vào modal
+                },
+                error: function () {
+                     alert('Không thể tải trang xóa sản phẩm.');
+                }
+            });
+        });
+    });
+</script>

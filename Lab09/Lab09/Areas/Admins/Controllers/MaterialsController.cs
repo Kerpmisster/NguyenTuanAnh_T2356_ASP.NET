@@ -55,7 +55,7 @@ namespace Lab09.Areas.Admins.Controllers
         // GET: Admins/Materials/Create
         public IActionResult Create()
         {
-            return View();
+            return PartialView("_Create");
         }
 
         // POST: Admins/Materials/Create
@@ -71,7 +71,7 @@ namespace Lab09.Areas.Admins.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(material);
+            return PartialView("_Create", material);
         }
 
         // GET: Admins/Materials/Edit/5
@@ -87,7 +87,7 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-            return View(material);
+            return PartialView("_Edit", material);
         }
 
         // POST: Admins/Materials/Edit/5
@@ -122,7 +122,7 @@ namespace Lab09.Areas.Admins.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(material);
+            return PartialView("_Edit", material);
         }
 
         // GET: Admins/Materials/Delete/5
@@ -140,7 +140,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(material);
+            return PartialView("_Delete", material);
         }
 
         // POST: Admins/Materials/Delete/5

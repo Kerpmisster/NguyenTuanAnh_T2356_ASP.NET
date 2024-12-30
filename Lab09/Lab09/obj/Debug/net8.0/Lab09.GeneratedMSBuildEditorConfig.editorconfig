@@ -48,8 +48,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEFkbWluVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/AdminUsers/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEFkbWluVXNlcnNcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/AdminUsers/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEFkbWluVXNlcnNcX0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/AdminUsers/_DetailsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEFkbWluVXNlcnNcX0RldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/AdminUsers/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEFkbWluVXNlcnNcX0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Banners/Create.cshtml]
@@ -72,8 +84,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJhbm5lcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Banners/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJhbm5lcnNcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Banners/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJhbm5lcnNcX0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Banners/_DetailsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJhbm5lcnNcX0RldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Banners/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEJhbm5lcnNcX0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Categories/Create.cshtml]
@@ -96,8 +120,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENhdGVnb3JpZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Contacts/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENvbnRhY3RzXENyZWF0ZS5jc2h0bWw=
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Categories/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENhdGVnb3JpZXNcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Categories/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENhdGVnb3JpZXNcX0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Categories/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENhdGVnb3JpZXNcX0RldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Categories/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENhdGVnb3JpZXNcX0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Contacts/Delete.cshtml]
@@ -116,8 +152,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENvbnRhY3RzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Customers/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEN1c3RvbWVyc1xDcmVhdGUuY3NodG1s
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Contacts/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENvbnRhY3RzXF9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Contacts/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENvbnRhY3RzXF9EZXRhaWxzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Contacts/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXENvbnRhY3RzXF9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Customers/Delete.cshtml]
@@ -134,6 +178,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Customers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEN1c3RvbWVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Customers/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEN1c3RvbWVyc1xfRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Customers/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEN1c3RvbWVyc1xfRGV0YWlsc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Customers/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEN1c3RvbWVyc1xfRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Dashboard/Index.cshtml]
@@ -160,6 +216,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEV4dGVuc2lvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Extensions/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEV4dGVuc2lvbnNcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Extensions/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEV4dGVuc2lvbnNcX0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Extensions/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEV4dGVuc2lvbnNcX0RldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Extensions/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXEV4dGVuc2lvbnNcX0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXExvZ2luXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -184,6 +256,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE1hdGVyaWFsc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Materials/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE1hdGVyaWFsc1xfQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Materials/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE1hdGVyaWFsc1xfRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Materials/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE1hdGVyaWFsc1xfRGV0YWlsc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Materials/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE1hdGVyaWFsc1xfRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/News/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE5ld3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -204,8 +292,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE5ld3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Orders/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE9yZGVyc1xDcmVhdGUuY3NodG1s
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/News/_Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE5ld3NcX0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/News/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE5ld3NcX0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/News/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE5ld3NcX0RldGFpbHNQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/News/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE5ld3NcX0VkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Orders/Delete.cshtml]
@@ -222,6 +322,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Orders/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE9yZGVyc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Orders/_Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE9yZGVyc1xfRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Orders/_DetailsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE9yZGVyc1xfRGV0YWlsc1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Orders/_Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5zXFZpZXdzXE9yZGVyc1xfRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DEV2409GH-T2356/NguyenTuanAnh_T2356_ASP.NET/Lab09/Lab09/Areas/Admins/Views/Partners/Create.cshtml]

@@ -55,12 +55,9 @@ namespace Lab09.Areas.Admins.Controllers
         // GET: Admins/Partners/Create
         public IActionResult Create()
         {
-            return View();
+            return PartialView("_Create");
         }
 
-        // POST: Admins/Partners/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Logo,Url,Orders,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Content,Status,Isdelete")] Partner partner)
@@ -71,7 +68,7 @@ namespace Lab09.Areas.Admins.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(partner);
+            return PartialView("_Create", partner);
         }
 
         // GET: Admins/Partners/Edit/5
@@ -87,12 +84,9 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-            return View(partner);
+            return PartialView("_Edit", partner);
         }
 
-        // POST: Admins/Partners/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Logo,Url,Orders,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Content,Status,Isdelete")] Partner partner)
@@ -122,7 +116,7 @@ namespace Lab09.Areas.Admins.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(partner);
+            return PartialView("_Edit", partner);
         }
 
         // GET: Admins/Partners/Delete/5
@@ -140,7 +134,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(partner);
+            return PartialView("_Delete", partner);
         }
 
         // POST: Admins/Partners/Delete/5

@@ -57,12 +57,9 @@ namespace Lab09.Areas.Admins.Controllers
         // GET: Admins/Categories/Create
         public IActionResult Create()
         {
-            return View();
+            return PartialView("_Create");
         }
 
-        // POST: Admins/Categories/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Title,Icon,MateTitle,MetaKeyword,MetaDescription,Slug,Orders,Parentid,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Notes,Status,Isdelete")] Category category)
@@ -88,8 +85,8 @@ namespace Lab09.Areas.Admins.Controllers
             catch (Exception ex)
             {
                 ViewBag.error = ex.Message;
-                return View(category);
             }
+            return PartialView("_Create", category);
         }
 
         // GET: Admins/Categories/Edit/5
@@ -105,12 +102,9 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-            return View(category);
+            return PartialView("_Edit", category);
         }
 
-        // POST: Admins/Categories/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Icon,MateTitle,MetaKeyword,MetaDescription,Slug,Orders,Parentid,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Notes,Status,Isdelete")] Category category)
@@ -148,22 +142,11 @@ namespace Lab09.Areas.Admins.Controllers
                     }
                     else
                     {
-                        return View(category);
+                        throw;
                     }
                 }
             }
-            // Đưa ra lỗi của modelState để bạn có thể debug
-            var errorMessages = ModelState.Values.SelectMany(v => v.Errors)
-                                                  .Select(e => e.ErrorMessage)
-                                                  .ToList();
-            // Xem danh sách lỗi trong debug console hoặc log
-            foreach (var errorMessage in errorMessages)
-            {
-                Console.WriteLine(errorMessage);
-            }
-
-            // Trả về lại view với model và các lỗi
-            return View(category);
+            return PartialView("_Edit", category);
         }
 
         // GET: Admins/Categories/Delete/5
@@ -181,7 +164,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(category);
+            return PartialView("_Delete", category);
         }
 
         // POST: Admins/Categories/Delete/5

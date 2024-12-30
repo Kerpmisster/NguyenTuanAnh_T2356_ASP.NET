@@ -55,12 +55,9 @@ namespace Lab09.Areas.Admins.Controllers
         // GET: Admins/Customers/Create
         public IActionResult Create()
         {
-            return View();
+            return PartialView("_Create");
         }
 
-        // POST: Admins/Customers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Username,Password,Address,Email,Phone,Avatar,CreatedDate,UpdateDate,CreatedBy,UpdatedBy,Isdelete,Isactive")] Customer customer)
@@ -71,7 +68,7 @@ namespace Lab09.Areas.Admins.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(customer);
+            return PartialView("_Create", customer);
         }
 
         // GET: Admins/Customers/Edit/5
@@ -87,7 +84,7 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-            return View(customer);
+            return PartialView("_Edit", customer);
         }
 
         // POST: Admins/Customers/Edit/5
@@ -122,7 +119,7 @@ namespace Lab09.Areas.Admins.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(customer);
+            return PartialView("_Edit", customer);
         }
 
         // GET: Admins/Customers/Delete/5
@@ -140,7 +137,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(customer);
+            return PartialView("_Delete", customer);
         }
 
         // POST: Admins/Customers/Delete/5

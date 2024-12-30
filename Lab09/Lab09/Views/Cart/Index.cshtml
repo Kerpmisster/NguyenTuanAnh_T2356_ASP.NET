@@ -129,6 +129,7 @@
             $("#totalMoney").text(totalMoney);
             $("#totalMoneyPay").text(totalMoney);
         })
+
         $('.qty_btn .fa-plus').click(function () {
             let qty = parseInt($(this).parent().siblings('.qty_input').val());
             let price = parseFloat($(this).parent().parent().siblings('p').attr("data-price"));
@@ -148,6 +149,7 @@
             $("#totalMoney").text(totalMoney);
             $("#totalMoneyPay").text(totalMoney);
         })
+
         $('.qty_input').change(function () {
             let qty = parseInt($(this).val());
 
@@ -163,6 +165,7 @@
             $("#totalMoney").text(totalMoney);
             $("#totalMoneyPay").text(totalMoney);
         })
+
         function total() {
             let totalMoney = 0;
             $("p.total-money").each(function () {
@@ -174,9 +177,9 @@
             });
             return totalMoney;
         }
-
         total();
     })
+
     function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
         try {
             decimalCount = Math.abs(decimalCount);

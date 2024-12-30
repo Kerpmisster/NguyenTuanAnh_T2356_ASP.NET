@@ -55,7 +55,7 @@ namespace Lab09.Areas.Admins.Controllers
         // GET: Admins/News/Create
         public IActionResult Create()
         {
-            return View();
+            return PartialView("_Create");
         }
 
         // POST: Admins/News/Create
@@ -71,7 +71,7 @@ namespace Lab09.Areas.Admins.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(news);
+            return PartialView("_Create", news);
         }
 
         // GET: Admins/News/Edit/5
@@ -87,12 +87,9 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-            return View(news);
+            return PartialView("_Edit", news);
         }
 
-        // POST: Admins/News/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Code,Title,Description,Content,Image,MetaTitle,MainKeyword,MetaKeyword,MetaDescription,Slug,Views,Likes,Star,CreatedDate,UpdatedDate,AdminCreated,AdminUpdated,Status,Isdelete")] News news)
@@ -122,7 +119,7 @@ namespace Lab09.Areas.Admins.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(news);
+            return PartialView("_Edit", news);
         }
 
         // GET: Admins/News/Delete/5
@@ -140,7 +137,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(news);
+            return PartialView("_Delete", news);
         }
 
         // POST: Admins/News/Delete/5

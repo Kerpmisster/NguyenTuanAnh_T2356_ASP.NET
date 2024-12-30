@@ -56,7 +56,7 @@ namespace Lab09.Areas.Admins.Controllers
         // GET: Admins/Contacts/Create
         public IActionResult Create()
         {
-            return View();
+            return PartialView("_Create");
         }
 
         [HttpPost]
@@ -69,7 +69,7 @@ namespace Lab09.Areas.Admins.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(contact);
+            return PartialView("_Create", contact);
         }
 
         // GET: Admins/Contacts/Edit/5
@@ -85,7 +85,7 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-            return View(contact);
+            return PartialView("_Edit", contact);
         }
 
         // POST: Admins/Contacts/Edit/5
@@ -120,7 +120,7 @@ namespace Lab09.Areas.Admins.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(contact);
+            return PartialView("_Edit", contact);
         }
 
         // GET: Admins/Contacts/Delete/5
@@ -138,7 +138,7 @@ namespace Lab09.Areas.Admins.Controllers
                 return NotFound();
             }
 
-            return View(contact);
+            return PartialView("_Delete", contact);
         }
 
         // POST: Admins/Contacts/Delete/5
