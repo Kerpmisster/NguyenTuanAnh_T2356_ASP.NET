@@ -43,8 +43,17 @@
             font-family: 'Source Sans Pro', sans-serif;
         }
 
+        a{
+            text-decoration:none;
+            color: black;
+        }
+
+        a:hover{
+            color: blue;
+        }
+
         .login-box {
-            background: #ffffff;
+            background-color: #ebe3e3;
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -123,12 +132,12 @@
 </head>
 <body>
     <div class="login-box">
-        <div class="login-title">Đăng nhập Admin</div>
+        <div class="login-title shadow">Đăng nhập Admin</div>
         <form asp-action="Index" method="post">
             <!-- Email input -->
-            <div class="form-group position-relative mb-3">
+            <div class="form-group position-relative mb-3 ">
                 <label for="email">Email</label>
-                <div class="input-group">
+                <div class="input-group shadow rounded">
                     <div class="input-group-prepend">
                         <span class="input-group-text" >
                             <i class="fas fa-envelope" style="line-height: 2;"></i>
@@ -139,9 +148,9 @@
             </div>
 
             <!-- Password input -->
-            <div class="form-group position-relative mb-3">
+            <div class="form-group position-relative mb-3 ">
                 <label for="password">Mật khẩu</label>
-                <div class="input-group">
+                <div class="input-group shadow rounded">
                     <div class="input-group-prepend">
                         <span class="input-group-text" >
                             <i class="fas fa-lock" style="line-height: 2;"></i>
@@ -157,14 +166,14 @@
             <!-- Remember me -->
             <div class="form-group d-flex justify-content-between align-items-center mb-3">
                 <div class="icheck-primary">
-                    <input type="checkbox" id="rememberme">
+                    <input type="checkbox" class="form-check-input" id="rememberme">
                     <label for="rememberme">Ghi nhớ tôi</label>
                 </div>
-                <a href="#" class="text-secondary">Quên mật khẩu?</a>
+                <a href="#">Quên mật khẩu?</a>
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-block btn-outline-primary">Đăng nhập</button>
+            <button type="submit" class="btn btn-block btn-outline-primary shadow">Đăng nhập</button>
         </form>
     </div>
 

@@ -16,12 +16,12 @@
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="IdOrders" class="control-label"></label>
-                <select asp-for="IdOrders" class="form-control" asp-items="ViewBag.IdOrders"></select>
+                <input asp-for="IdOrders" class="form-control" />
                 <span asp-validation-for="IdOrders" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="IdCustomer" class="control-label"></label>
-                <input asp-for="IdCustomer" class="form-control" />
+                <select asp-for="IdCustomer" class="form-control" asp-items="ViewBag.IdCustomer"></select>
                 <span asp-validation-for="IdCustomer" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -82,9 +82,6 @@
 </div>
 
 <div>
-    <a class="btn btn-success btn-sm" asp-action="Index">
-        <i class="fas fa-backward"></i>
-        Quay trở lại
-    </a>
+    <a asp-action="Index">Back to List</a>
 </div>
 

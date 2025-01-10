@@ -1,22 +1,4 @@
-﻿﻿﻿
-* {
-	font-family: Gotham-Medium;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	outline: none;
-	border: none;
-	text-decoration: none;
-	transition: all 0.2s linear;
-}
-
-a {
-	color: #007bff;
-	text-decoration: none !important;
-	background-color: transparent;
-}
-
-:root {
+﻿:root {
 	--color: #2c2e53;
 	--color-hover: #131317;
 }
@@ -25,6 +7,23 @@ a {
 	html {
 		font-size: 16px;
 	}
+}
+
+﻿﻿* {
+	font-family: Gotham-Medium, sans-serif !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	outline: none !important;
+	border: none !important;
+	text-decoration: none !important;
+	transition: all 0.2s linear !important;
+}
+
+a {
+	color: #007bff;
+	text-decoration: none !important;
+	background-color: transparent;
 }
 
 .navbar a:hover:after, .navbar a.active:after {
@@ -470,14 +469,11 @@ footer {
 	background-image: url(../img/anhcat/banner.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	margin-top: 3rem;
 	padding: 8rem 10% 16rem 10%;
 }
 
 .home-banner__content {
-	padding-left: 2rem;
-}
-
-.home-contact__content {
 	padding-left: 2rem;
 }
 
@@ -545,6 +541,9 @@ footer {
 
 .home-category {
 	background-color: #f3f3f3;
+}
+
+section {
 	padding: 0 10%;
 }
 
@@ -584,7 +583,6 @@ footer {
 	color: var(--color);
 	position: relative;
 	display: inline-block;
-	margin-bottom: 2rem;
 	font-size: 2rem;
 }
 
@@ -895,6 +893,15 @@ h4 {
 	margin: 0 0 0 12rem;
 }
 
+.home-contact__content::after {
+	content:"";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 7rem;
+	border-top: 0.3rem solid #fff;
+}
+
 .home-contact__form p {
 	margin: 0;
 	color: #fff;
@@ -908,7 +915,7 @@ h4 {
 }
 
 .home-contact__form button {
-	margin: 0.6rem;
+	margin: 0.6rem; 
 	background: #fff;
 	padding: 0.6rem 1.5rem;
 	font-size: 0.8rem;
@@ -1314,6 +1321,23 @@ label {
 .form-contact {
 	position: relative;
 	margin-bottom: 0.5rem;
+}
+
+input {
+	outline: none !important; /* Tắt outline */
+	border: none !important; /* Tắt border */
+	box-shadow: none !important; /* Tắt shadow nếu có */
+}
+
+
+	input:focus::placeholder {
+		color: transparent;
+	}
+
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+	margin: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 .box-contact__btn {

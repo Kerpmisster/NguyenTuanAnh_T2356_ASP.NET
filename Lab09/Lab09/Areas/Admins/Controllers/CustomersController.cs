@@ -87,9 +87,6 @@ namespace Lab09.Areas.Admins.Controllers
             return PartialView("_Edit", customer);
         }
 
-        // POST: Admins/Customers/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(long id, [Bind("Id,Name,Username,Password,Address,Email,Phone,Avatar,CreatedDate,UpdateDate,CreatedBy,UpdatedBy,Isdelete,Isactive")] Customer customer)

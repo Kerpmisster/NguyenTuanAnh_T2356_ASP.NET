@@ -23,7 +23,6 @@ namespace Lab09.Controllers
         {
             var categories = await _context.Categories
                   .Include(c => c.Products) // Bao gồm danh sách sản phẩm
-/*                  .Where(c => c.Products.Any() && c.Status == 1 && c.Isdelete == false)*/ // Lọc danh mục có ít nhất 1 sản phẩm
                   .ToListAsync();
 
             return View(categories);

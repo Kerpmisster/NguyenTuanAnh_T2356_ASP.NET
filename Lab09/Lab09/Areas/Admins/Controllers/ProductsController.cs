@@ -56,7 +56,6 @@ namespace Lab09.Areas.Admins.Controllers
 
         }
 
-        // GET: Admins/Products/Create
         public IActionResult Create()
         {
             ViewData["Cid"] = new SelectList(_context.Categories, "Id", "Title");
@@ -137,6 +136,9 @@ namespace Lab09.Areas.Admins.Controllers
                             product.Image = "/img/products/" + FileName;
                         }
                     }
+
+                    product.Hot = product.Hot == 1 ? (byte?)1 : 0;  // Cập nhật giá trị Hot (1: Hot, 0: Không Hot)
+
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                     return Json(new { success = true });

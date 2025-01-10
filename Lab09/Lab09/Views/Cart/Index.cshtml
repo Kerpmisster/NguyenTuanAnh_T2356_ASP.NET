@@ -60,22 +60,21 @@
                                         <p data-money="@money" class="total-money">Thành tiền: <span id="money">@string.Format("{0:#,##0}", @money)</span> VND</p>
                                     </div>
                                 </div>
-
                                 <div class="btn-action">
                                     <a href="/cart/remove/?id=@item.Id" class="btn remove">
                                         <i class="fa-solid fa-xmark"></i>
                                     </a>
-                                    <a href="/cart/?id=@item.Id" data-id="@item.Id" data-qty="@item.Quantity"
+                                    <a href="/cart/update/?id=@item.Id&quantity=@item.Quantity" data-id="@item.Id" data-qty="@item.Quantity"
                                        class="btn update">Cập nhật</a>
-
                                 </div>
                             </div>
                         }
                     }
                 </div>
-                <div class="box-cart-bill">
-                    @if (Model.Any())
-                    {
+                @if (Model.Any())
+                {
+                    <div class="box-cart-bill">
+
                         <h3 class="mb-4"> Tóm tắt đơn hàng </h3>
                         <p class="mb-2">
                             <strong>Tổng thành tiền:</strong>
@@ -101,8 +100,9 @@
 
                             </div>
                         </div>
-                    }
-                </div>
+
+                    </div>
+                }
             </div>
         </div>
     </div>
@@ -110,92 +110,95 @@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
+        // Khi nhấn nút giảm
         $('.qty_btn .fa-minus').click(function () {
-            let qty = parseInt($(this).parent().siblings('.qty_input').val());
-            let price = parseFloat($(this).parent().parent().siblings('p').attr("data-price"));
-            qty -= 1;
-            let money = qty * price;
-            $(this).parent().siblings('.qty_input').val(qty);
+            let qtyInput = $(this).closest('.box-cart-item-btn').find('.qty_input');
+            let qty = parseInt(qtyInput.val());
+            let price = parseFloat($(this).closest('.box-cart-item').find('p[data-price]').attr("data-price"));
 
-            let id = $(this).parent().parent().parent().parent().siblings('.btn-action').children('.update').attr("data-id");
+            if (qty > 1) { // Đảm bảo không giảm xuống dưới 1
+                qty -= 1;
+                qtyInput.val(qty);
+                updateCartItem(this, qty, price);
+            }
+        });
 
-            let href = "/cart/Update/?id=" + id + "&quantity=" + qty;
-
-            $(this).parent().parent().parent().parent().siblings('.btn-action').children('.update').attr("href", href);
-            $(this).parent().parent().siblings('p').attr("data-money", money);
-            let total_money = formatMoney(money, 0, ",", ".");
-            $(this).parent().parent().siblings('p').children("span#money").text(total_money);
-            let totalMoney = formatMoney(total(), 0, ",", ".");
-            $("#totalMoney").text(totalMoney);
-            $("#totalMoneyPay").text(totalMoney);
-        })
-
+        // Khi nhấn nút tăng
         $('.qty_btn .fa-plus').click(function () {
-            let qty = parseInt($(this).parent().siblings('.qty_input').val());
-            let price = parseFloat($(this).parent().parent().siblings('p').attr("data-price"));
+            let qtyInput = $(this).closest('.box-cart-item-btn').find('.qty_input');
+            let qty = parseInt(qtyInput.val());
+            let price = parseFloat($(this).closest('.box-cart-item').find('p[data-price]').attr("data-price"));
+
             qty += 1;
-            let money = qty * price;
-            $(this).parent().siblings('.qty_input').val(qty);
+            qtyInput.val(qty);
+            updateCartItem(this, qty, price);
+        });
 
-            let id = $(this).parent().parent().parent().parent().siblings('.btn-action').children('.update').attr("data-id");
-
-            let href = "/cart/Update/?id=" + id + "&quantity=" + qty;
-
-            $(this).parent().parent().parent().parent().siblings('.btn-action').children('.update').attr("href", href);
-            $(this).parent().parent().siblings('p').attr("data-money", money);
-            let total_money = formatMoney(money, 0, ",", ".");
-            $(this).parent().parent().siblings('p').children("span#money").text(total_money);
-            let totalMoney = formatMoney(total(), 0, ",", ".");
-            $("#totalMoney").text(totalMoney);
-            $("#totalMoneyPay").text(totalMoney);
-        })
-
+        // Khi thay đổi trực tiếp số lượng
         $('.qty_input').change(function () {
             let qty = parseInt($(this).val());
+            if (qty < 1 || isNaN(qty)) qty = 1; // Đảm bảo số lượng hợp lệ
+            $(this).val(qty);
 
-            let id = $(this).parent().parent().parent().siblings('.btn-action').children('.update').attr("data-id");
-            let price = parseFloat($(this).parent().siblings('p').attr("data-price"));
+            let price = parseFloat($(this).closest('.box-cart-item').find('p[data-price]').attr("data-price"));
+            updateCartItem(this, qty, price);
+        });
+
+        // Hàm cập nhật thành tiền và tổng tiền
+        function updateCartItem(element, qty, price) {
             let money = qty * price;
-            let href = "/cart/Update/?id=" + id + "&quantity=" + qty;
-            $(this).parent().parent().parent().siblings('.btn-action').children('.update').attr("href", href);
-            $(this).parent().parent().siblings('p').attr("data-money", money);
-            let total_money = formatMoney(money, 0, ",", ".");
-            $(this).parent().siblings('p').children("span#money").text(total_money)
-            let totalMoney = formatMoney(total(), 0, ",", ".");
-            $("#totalMoney").text(totalMoney);
-            $("#totalMoneyPay").text(totalMoney);
-        })
 
-        function total() {
-            let totalMoney = 0;
+            // Cập nhật thành tiền
+            let totalMoneyElement = $(element).closest('.box-cart-item').find('p.total-money');
+            totalMoneyElement.attr("data-money", money);
+            let formattedMoney = formatMoney(money, 0, ",", ".");
+            totalMoneyElement.find("span#money").text(formattedMoney);
+
+            // Cập nhật tổng tiền giỏ hàng
+            let totalCartMoney = calculateTotal();
+            $("#totalMoney").text(formatMoney(totalCartMoney, 0, ",", "."));
+            $("#totalMoneyPay").text(formatMoney(totalCartMoney, 0, ",", "."));
+
+            // Cập nhật href cho nút "Cập nhật"
+            let id = $(element).closest('.box-cart-border-bottom').find('.btn-action .update').attr("data-id");
+            let updateLink = "/cart/Update/?id=" + id + "&quantity=" + qty;
+            $(element).closest('.box-cart-border-bottom').find('.btn-action .update').attr("href", updateLink);
+        }
+
+        // Hàm tính tổng tiền giỏ hàng
+        function calculateTotal() {
+            let total = 0;
             $("p.total-money").each(function () {
-                console.log($(this));
-                console.log($(this).attr("data-money"));
-                let money = parseFloat($(this).attr("data-money"));
-                console.log("total-money", money);
-                totalMoney += money;
+                let itemMoney = parseFloat($(this).attr("data-money"));
+                if (!isNaN(itemMoney)) {
+                    total += itemMoney;
+                }
             });
-            return totalMoney;
+            return total;
         }
-        total();
-    })
 
-    function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
-        try {
-            decimalCount = Math.abs(decimalCount);
-            decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+        // Hàm định dạng tiền tệ
+        function formatMoney(amount, decimalCount = 2, decimal = ".", thousands = ",") {
+            try {
+                decimalCount = Math.abs(decimalCount);
+                decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
 
-            const negativeSign = amount < 0 ? "-" : "";
+                const negativeSign = amount < 0 ? "-" : "";
 
-            let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
-            let j = (i.length > 3) ? i.length % 3 : 0;
+                let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+                let j = (i.length > 3) ? i.length % 3 : 0;
 
-            return negativeSign +
-                (j ? i.substr(0, j) + thousands : '') +
-                i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) +
-                (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
-        } catch (e) {
-            console.log(e)
+                return negativeSign +
+                    (j ? i.substr(0, j) + thousands : '') +
+                    i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) +
+                    (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+            } catch (e) {
+                console.log(e);
+            }
         }
-    };
+    });
 </script>
+
+
+
+

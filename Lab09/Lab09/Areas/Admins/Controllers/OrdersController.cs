@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Lab09.Models;
+using X.PagedList;
+using Microsoft.EntityFrameworkCore.Query;
 
 namespace Lab09.Areas.Admins.Controllers
 {
@@ -20,10 +22,30 @@ namespace Lab09.Areas.Admins.Controllers
         }
 
         // GET: Admins/Orders
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string name, int page = 1)
         {
-            var devXuongMocContext = _context.Orders.Include(o => o.IdOrdersNavigation);
-            return View(await devXuongMocContext.ToListAsync());
+            int limit = 5;
+            // Lấy dữ liệu ban đầu từ Orders và bao gồm IdCustomerNavigation
+            var devXuongMocContext = _context.Orders.Include(o => o.IdCustomerNavigation);
+
+            // Nếu có từ khóa tìm kiếm, lọc dữ liệu theo tên khách hàng
+            if (!string.IsNullOrEmpty(name))
+            {
+                devXuongMocContext = devXuongMocContext
+                    .Where(o => o.IdCustomerNavigation.Name.Contains(name))
+                    as IIncludableQueryable<Order, Customer?>;
+            }
+
+            // Phân trang dữ liệu
+            var pagedOrders = await devXuongMocContext
+                .OrderBy(o => o.Id)
+                .ToPagedListAsync(page, limit);
+
+            // Gửi từ khóa tìm kiếm qua ViewBag
+            ViewBag.keyword = name;
+
+            // Trả về view với dữ liệu phân trang
+            return View(pagedOrders);
         }
 
         // GET: Admins/Orders/Details/5
@@ -35,7 +57,7 @@ namespace Lab09.Areas.Admins.Controllers
             }
 
             var order = await _context.Orders
-                .Include(o => o.IdOrdersNavigation)
+                .Include(o => o.IdCustomerNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (order == null)
             {
@@ -58,7 +80,7 @@ namespace Lab09.Areas.Admins.Controllers
             {
                 return NotFound();
             }
-            ViewData["IdOrders"] = new SelectList(_context.Customers, "Id", "Id", order.IdOrders);
+            ViewData["IdCustomer"] = new SelectList(_context.Customers, "Id", "Id", order.IdCustomer);
             return PartialView("_Edit", order);
         }
 
@@ -91,7 +113,7 @@ namespace Lab09.Areas.Admins.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["IdOrders"] = new SelectList(_context.Customers, "Id", "Id", order.IdOrders);
+            ViewData["IdCustomer"] = new SelectList(_context.Customers, "Id", "Id", order.IdCustomer);
             return PartialView("_Edit", order);
         }
 
@@ -104,7 +126,7 @@ namespace Lab09.Areas.Admins.Controllers
             }
 
             var order = await _context.Orders
-                .Include(o => o.IdOrdersNavigation)
+                .Include(o => o.IdCustomerNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (order == null)
             {

@@ -4,24 +4,23 @@
     ViewData["Title"] = "Nội thất Hoàng Hoan";
 	// Layout = "~/Views/Shared/_Main.cshtml";
 }
-<div class="home-banner">
+<section class="home-banner">
     <div class="home-banner__content">
         <h1>
-            THẾ GIỚI NỘI THẤT SỐ 1 VIỆT NAM <br /><span>HOÀNG HOAN</span>
+            THẾ GIỚI NỘI THẤT SỐ 1 VIỆT NAM <br/>
+            <span>HOÀNG HOAN</span>
         </h1>
         <p>
-            Sứ mệnh của chúng tôi là kết hợp hài hoà giữa ý tưởng và<br /> mong muốn
-            của khách hàng,đem lại những phút giây thư<br /> giãn tuyệt vời bên gia
+            Sứ mệnh của chúng tôi là kết hợp hài hoà giữa ý tưởng và<br/> mong muốn
+            của khách hàng,đem lại những phút giây thư<br/> giãn tuyệt vời bên gia
             đình và những người thân yêu
-
-        </p>
-        <button class="home-banner__btn">
-            <a href="#">LIÊN HỆ NGAY</a>
-        </button>
-
+        </p>    
+        <a href="#" class="home-banner__btn">
+            LIÊN HỆ NGAY
+        </a>
     </div>
-</div>
-<div class="home-category">
+</section>
+<section class="home-category">
     <div class="list-category">
         <div class="row">
             <div class="col-md-3">
@@ -75,30 +74,32 @@
     </div>
     <div class="slide-product">
         <h4>sản phẩm nổi bật</h4>
-        @* <div class="slick-slider slider slick-initialized">
+        <div class="slick-slider slider slick-initialized">
             <div class="all-product__item">
                 <div class="row bg-white">
-                    @foreach (var products in Model.Take(4))
+                    @foreach (var product in Model)
                     {
-                        <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="col-md-3 mb-3">
                             <div class="product-card">
-                                <img src="@products.Image" alt="@products.Title" class="product-card-img">
+                                <img src="@product.Image.Replace("/Images", "/Img")" alt="@product.Title" class="product-card-img" />
                                 <div class="product-card-content">
-                                    <h6><a asp-controller="Product" asp-action="Details" asp-route-id="@products.Id">@products.Title</a></h6>
-                                    <p class="old-price">@string.Format("{0:#,##0}", products.PriceOld)VND</p>
-                                    <p class="new-price">@string.Format("{0:#,##0}", products.PriceNew)VND</p>
-                                    <a asp-controller="Cart" asp-action="Add" asp-route-id="@products.Id">
-                                        <i class="fi fi-bs-shopping-bag">Mua hàng</i>
-                                    </a>
+                                    <h6><a href="/product/@product.Id">@product.Title</a></h6>
+                                    <p class="old-price">@string.Format("{0:#,##0}", @product.PriceOld) VND</p>
+                                    <p class="new-price">@string.Format("{0:#,##0}", @product.PriceNew) VND</p>
                                 </div>
+                            </div>
+                            <div class="home-banner__btn">
+                                <a asp-controller="Cart" asp-action="Add" asp-route-id="@product.Id">
+                                    <i class="fi fi-bs-shopping-bag"> &nbsp; Mua hàng</i>
+                                </a>
                             </div>
                         </div>
                     }
                 </div>
             </div>
-        </div> *@
+        </div> 
     </div>
-</div>
+</section>
 <div class="home-aboutUs">
     <div class="home-aboutUs__content">
         <h4>về chúng tôi</h4>

@@ -1,4 +1,30 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model Lab09.Models.AdminUser
+
+<h1 class="text-center">Thêm mới tài khoản</h1>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h5 class="card-title mb-0">Thông tin sản phẩm</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-4">
+                        <input type="submit" value="Thêm mới" class="btn btn-primary" />
+                        <a class="btn btn-secondary" asp-action="Index">
+                            <i class="fas fa-backward"></i> Quay trở lại
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

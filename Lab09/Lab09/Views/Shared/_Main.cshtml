@@ -12,10 +12,10 @@
     <link rel="apple-touch-icon" href="/logo192.png">
     @* <link rel="manifest" href="/manifest.json"> *@
     <title>@ViewData["Title"] </title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/fonts.css" />
+    <link rel="stylesheet" href="~/css/fonts.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Lab09.styles.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" /> *@
     <link rel="shortcut icon" href="~/img/logo/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css">
@@ -36,15 +36,6 @@
         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
             <img class="logo" src="~/img/anhcat/logo.jpg" alt="logo" />
         </a>
-@*         <nav class="navbar">
-            <a class="link" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ </a>
-            <a class="link" asp-area="" asp-controller="Aboutus" asp-action="Index">Giới thiệu </a>
-            <a class="link" asp-area="" asp-controller="Products" asp-action="Index">Sản phẩm</a>
-            <a class="link" asp-area="" asp-controller="New" asp-action="Index">Tin tức</a>
-            <a class="link" asp-area="" asp-controller="Partner" asp-action="Index">Đối tác</a>
-            <a class="link" asp-area="" asp-controller="Contact" asp-action="Index">Liên hệ</a>
-
-        </nav> *@
         <nav class="navbar">
             <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Home") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
             <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Introduction") ? "active" : "")" asp-area="" asp-controller="Introduction" asp-action="Index">Giới thiệu</a>
@@ -59,35 +50,13 @@
                 <a class="link" id="icon1" asp-area="" asp-controller="Cart" asp-action="Index">
                     <i class="fi fi-bs-shopping-bag"></i>
                 </a>
-                <div class="box box-carts">
-                    <div class="box__empty">
-                        <p class="box__title">
-                            Giỏ hàng của bạn đang trống !
-                        </p>
-                        <a asp-controller="Products" asp-action="Index">
-                            <div class="check__btn">
-                                Mua hàng ngay
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                
             </div>
             <div class="icon icon-wishlist">
                 <a id="icon2" href="/danh-sach-yeu-thich">
                     <i class="fi fi-bs-heart"></i>
                 </a>
-                <div id="box2" class="box box-wishlist">
-                    <div class="box__empty">
-                        <p class="box__title">
-                            Danh sách yêu thích trống !
-                        </p>
-                        <a asp-controller="Products" asp-action="Index">
-                            <div class="check__btn">
-                                Xem thêm sản phẩm
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                
             </div>
             <div class="icon">
                 <i class="fi fi-bs-search"></i>
@@ -99,7 +68,7 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </a>
             </div>
-            <!-- Dropdown for Login/Register -->
+            
             <div class="icon icondropdown">
                 <div class="dropdown">
                     <a href="#" class="nav-link text-light dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -131,9 +100,6 @@
                                 }
                             }
                         </li>
-@*                         <li><a class="dropdown-item" asp-area="CustomerUser" asp-controller="Customers" asp-action="Create">Đăng ký</a></li>
-                        <li><a class="dropdown-item" asp-area="CustomerUser" asp-controller="Login" asp-action="Index">Đăng nhập</a></li> *@
-
                     </ul>
                 </div>
             </div>
@@ -147,11 +113,9 @@
         </div>
 
     </div>
-    <div style="margin-top:5.5rem;">
-        <main role="main" class="">
-            @RenderBody()
-        </main>
-    </div>
+
+    @RenderBody()
+
 
     <footer>
         <div class="allInfo">

@@ -155,6 +155,7 @@ wwwroot\img\anhcat\vinpearl.png
 wwwroot\img\author1.jpg
 wwwroot\img\author2.jpg
 wwwroot\img\author3.jpg
+wwwroot\img\avatar\avatar-1.png
 wwwroot\img\background\admin-login.jpg
 wwwroot\img\Banner\banner.png
 wwwroot\img\blockqoute-bg.jpg

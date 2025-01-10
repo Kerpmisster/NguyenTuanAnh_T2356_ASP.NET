@@ -1,0 +1,55 @@
+﻿@model Lab09.Models.Customer
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<div class="container-fluid mt-3 mb-3">
+    <h2 class="text-center mb-4" style="margin-top:8rem">Thông tin cá nhân</h2>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 d-flex justify-content-center">
+                    <img src="~/img/avatar/avatar-1.png" alt="Avatar" class="img-thumbnail" style="height:15rem;width:15rem;margin-top:1.5rem" />
+                </div>
+                <div class="col-md-8">
+                    <form method="post" action="@Url.Action("Edit", "Profile")">
+                        <input type="hidden" name="Id" value="@Model.Id" /> 
+                        <p><strong>Họ và tên:</strong> <input type="text" name="Name" class="form-control" value="@Model.Name" disabled /></p>
+                        <p><strong>Email:</strong> <input type="email" name="Email" class="form-control" value="@Model.Email" disabled /></p>
+                        <p><strong>Tên đăng nhập:</strong> <input type="text" name="Username" class="form-control" value="@Model.Username" disabled /></p>
+                        <p><strong>Địa chỉ:</strong> <input type="text" name="Address" class="form-control" value="@Model.Address" disabled /></p>
+                        <p><strong>Số điện thoại:</strong> <input type="text" name="Phone" class="form-control" value="@Model.Phone" disabled /></p>
+                        <p><strong>Ngày tạo tài khoản:</strong> @Model.CreatedDate?.ToString("dd/MM/yyyy")</p>
+                        <p><strong>Trạng thái:</strong> @(Model.Isactive == 1 ? "Hoạt động" : "Không hoạt động")</p>
+                        <div class="text-center m-3">
+                            <button type="button" id="editBtn" class="btn btn-warning">Sửa</button>
+                            <button type="submit" id="saveBtn" class="btn btn-success" style="display:none;">Lưu</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center m-3">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-lg">Quay lại trang chủ</a>
+        <a asp-controller="Profile" asp-action="Orders" class="btn btn-secondary btn-lg">Xem đơn hàng</a>
+    </div>  
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById("editBtn").addEventListener("click", function () {
+
+            var inputs = document.querySelectorAll("input");
+            inputs.forEach(function (input) {
+                input.disabled = false;
+            });
+
+            document.getElementById("editBtn").style.display = "none";
+            document.getElementById("saveBtn").style.display = "inline-block";
+        });
+    </script>
+}
+

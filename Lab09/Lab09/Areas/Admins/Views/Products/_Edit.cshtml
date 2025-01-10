@@ -12,7 +12,6 @@
             <div class="card-body">
                 <form asp-action="Edit" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-
                     <input type="hidden" asp-for="Id" />
                     <div class="row">
                         <div class="col-md-6">
@@ -163,7 +162,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-between mt-4">
-                        <input type="submit" value="Lưu" class="btn btn-primary" />
+                        <input type="submit" value="Cập nhật" class="btn btn-primary" />
                         <a class="btn btn-secondary" asp-action="Index">
                             <i class="fas fa-backward"></i> Quay trở lại
                         </a>

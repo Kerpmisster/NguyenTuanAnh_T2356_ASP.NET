@@ -12,7 +12,6 @@
             <div class="card-body">
                 <form asp-action="Create" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-
                     <div class="row">
                         <div class="col-md-6">
                             <div class="mb-3">
@@ -20,19 +19,16 @@
                                 <select asp-for="Cid" class="form-control" asp-items="ViewBag.Cid"></select>
                                 <span asp-validation-for="Cid" class="text-danger"></span>
                             </div>
-
                             <div class="mb-3">
                                 <label asp-for="Code" class="form-label"></label>
                                 <input asp-for="Code" class="form-control" />
                                 <span asp-validation-for="Code" class="text-danger"></span>
                             </div>
-
                             <div class="mb-3">
                                 <label asp-for="Title" class="form-label"></label>
                                 <input asp-for="Title" class="form-control" />
                                 <span asp-validation-for="Title" class="text-danger"></span>
                             </div>
-
                             <div class="mb-3">
                                 <label asp-for="Description" class="form-label"></label>
                                 <input asp-for="Description" class="form-control" />
@@ -88,8 +84,6 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-
-
                             <div class="mb-3">
                                 <label asp-for="Size" class="form-label"></label>
                                 <input asp-for="Size" class="form-control" />
@@ -116,13 +110,15 @@
 
                             <div class="mb-3">
                                 <label asp-for="Home" class="form-label"></label>
-                                <input asp-for="Home" class="form-control" />
+                               @*  <input asp-for="Home" type="hidden" name="Home" value="0" /> *@
+                                <input asp-for="Home" class="form-control"/>
                                 <span asp-validation-for="Home" class="text-danger"></span>
                             </div>
 
                             <div class="mb-3">
                                 <label asp-for="Hot" class="form-label"></label>
-                                <input asp-for="Hot" class="form-control" />
+                                @* <input asp-for="Hot" type="hidden" name="Home" value="0" /> *@
+                                <input asp-for="Hot" class="form-control"/>
                                 <span asp-validation-for="Hot" class="text-danger"></span>
                             </div>
 

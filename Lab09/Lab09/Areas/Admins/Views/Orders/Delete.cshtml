@@ -13,10 +13,10 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdCustomer)
+            @Html.DisplayNameFor(model => model.IdOrders)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdCustomer)
+            @Html.DisplayFor(model => model.IdOrders)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.IdPayment)
@@ -79,19 +79,16 @@
             @Html.DisplayFor(model => model.Isactive)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.IdOrdersNavigation)
+            @Html.DisplayNameFor(model => model.IdCustomerNavigation)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.IdOrdersNavigation.Id)
+            @Html.DisplayFor(model => model.IdCustomerNavigation.Id)
         </dd>
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> 
-        <a class="btn btn-success btn-sm" asp-action="Index">
-            <i class="fas fa-backward"></i>
-            Quay trở lại
-        </a>
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
     </form>
 </div>

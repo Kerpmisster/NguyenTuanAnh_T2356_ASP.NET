@@ -637,6 +637,10 @@
       "PackagePath": "staticwebassets\\img\\author3.jpg"
     },
     {
+      "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab09\\Lab09\\wwwroot\\img\\avatar\\avatar-1.png",
+      "PackagePath": "staticwebassets\\img\\avatar\\avatar-1.png"
+    },
+    {
       "Id": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab09\\Lab09\\wwwroot\\img\\background\\admin-login.jpg",
       "PackagePath": "staticwebassets\\img\\background\\admin-login.jpg"
     },

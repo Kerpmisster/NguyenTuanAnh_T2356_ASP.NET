@@ -33,6 +33,8 @@ public partial class DevXuongMocContext : DbContext
 
     public virtual DbSet<Banner> Banners { get; set; }
 
+    public virtual DbSet<Cart> Carts { get; set; }
+
     public virtual DbSet<Category> Categories { get; set; }
 
     public virtual DbSet<Contact> Contacts { get; set; }
@@ -293,6 +295,14 @@ public partial class DevXuongMocContext : DbContext
             entity.Property(e => e.Urls)
                 .HasMaxLength(255)
                 .HasColumnName("URLS");
+        });
+
+        modelBuilder.Entity<Cart>(entity =>
+        {
+            entity.ToTable("Cart");
+
+            entity.Property(e => e.Price).HasColumnType("decimal(18, 0)");
+            entity.Property(e => e.Total).HasColumnType("decimal(18, 0)");
         });
 
         modelBuilder.Entity<Category>(entity =>
@@ -710,8 +720,8 @@ public partial class DevXuongMocContext : DbContext
                 .HasColumnType("decimal(18, 0)")
                 .HasColumnName("TOTAL_MONEY");
 
-            entity.HasOne(d => d.IdOrdersNavigation).WithMany(p => p.Orders)
-                .HasForeignKey(d => d.IdOrders)
+            entity.HasOne(d => d.IdCustomerNavigation).WithMany(p => p.Orders)
+                .HasForeignKey(d => d.IdCustomer)
                 .HasConstraintName("FK_ORDERS_CUSTOMER");
         });
 
@@ -737,7 +747,7 @@ public partial class DevXuongMocContext : DbContext
 
             entity.HasOne(d => d.IdProductNavigation).WithMany(p => p.Orderdetails)
                 .HasForeignKey(d => d.IdProduct)
-                .HasConstraintName("FK_ORDERDETAILS_PRODUCT");
+                .HasConstraintName("FK_ORDERDETAILS_PRODUCT1");
         });
 
         modelBuilder.Entity<Partner>(entity =>
