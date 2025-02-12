@@ -26,7 +26,6 @@ namespace Lab09.Controllers
                   .ToListAsync();
 
             return View(categories);
-            //return View(await _context.Products.ToListAsync());
         }
 
         // GET: Products/Details/5
@@ -38,6 +37,7 @@ namespace Lab09.Controllers
             }
 
             var product = await _context.Products
+                .Include(p => p.CidNavigation)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
@@ -47,25 +47,19 @@ namespace Lab09.Controllers
             return View(product);
         }
 
-        // GET: Products/Category/5
-        //public async Task<IActionResult> Category(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
+        public async Task<IActionResult> Category(int id)
+        {
+            var category = await _context.Categories
+                .Include(c => c.Products)
+                .FirstOrDefaultAsync(c => c.Id == id);
 
-        //    var category = await _context.Categories
-        //        .Include(c => c.Products)
-        //        .FirstOrDefaultAsync(c => c.Id == id);
+            if (category == null)
+            {
+                return NotFound();
+            }
 
-        //    if (category == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(category.Products);
-        //}
+            return View(category);
+        }
 
     }
 }

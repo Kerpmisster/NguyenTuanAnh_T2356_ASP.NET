@@ -2,22 +2,10 @@
 	--color: #2c2e53;
 	--color-hover: #131317;
 }
-
 @media (min-width: 768px) {
 	html {
 		font-size: 16px;
 	}
-}
-
-﻿﻿* {
-	font-family: Gotham-Medium, sans-serif !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	box-sizing: border-box !important;
-	outline: none !important;
-	border: none !important;
-	text-decoration: none !important;
-	transition: all 0.2s linear !important;
 }
 
 a {
@@ -270,11 +258,6 @@ p {
 	box-shadow: 0 1px 7px 0 rgb(0 0 0 / 35%);
 	cursor: pointer;
 }
-
-	.product-card:hover img {
-		transform: scale(1.5);
-		transition: 3s all;
-	}
 
 .product-card-content {
 	margin-top: 1rem;
@@ -766,11 +749,6 @@ h4 {
 	object-fit: cover;
 }
 
-.thumbnail:hover img {
-	transition: transform 1s ease;
-	transform: scale(1.2)
-}
-
 .home-news .title {
 	margin-bottom: 0.5rem;
 	text-align: justify;
@@ -1164,7 +1142,11 @@ h5 {
 .all-product__item--title {
 	display: flex;
 	justify-content: space-between;
-	padding: 2rem 2rem 0 2rem;
+	padding: 1rem;
+}
+
+.all-product__item--title h4 {
+	margin: 0;
 }
 
 .carousel-btn {

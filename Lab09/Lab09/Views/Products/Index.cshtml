@@ -46,11 +46,11 @@
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            <span class="visually-hidden"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+            <span class="visually-hidden"></span>
         </button>
     </div>
     @foreach (var category in Model)
@@ -59,16 +59,19 @@
         {
             <div class="all-product__item">
                 <div class="all-product__item--title">
-                    <h4>@category.Title</h4> 
+                    <h4>@category.Title</h4>
+                    <a asp-action="Category" asp-route-id="@category.Id" class="see-all">Xem thêm</a>
                 </div>
                 <div class="row bg-white">
-                    @foreach (var product in category.Products)
+                    @foreach (var product in category.Products.Take(4))
                     {
                         <div class="col-md-3 mb-3">
                             <div class="product-card">
                                 <img src="@product.Image.Replace("/Images", "/Img")" alt="@product.Title" class="product-card-img" />
                                 <div class="product-card-content">
-                                    <h6><a href="/product/@product.Id">@product.Title</a></h6>
+                                    <h6>
+                                        <a asp-action="Details" asp-route-id="@product.Id" class="text-decoration-none text-dark">@product.Title</a>
+                                    </h6>
                                     <p class="old-price">@string.Format("{0:#,##0}", @product.PriceOld) VND</p>
                                     <p class="new-price">@string.Format("{0:#,##0}", @product.PriceNew) VND</p>
                                 </div>

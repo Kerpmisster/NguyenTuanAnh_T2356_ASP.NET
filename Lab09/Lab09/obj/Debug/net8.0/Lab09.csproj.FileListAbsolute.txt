@@ -291,3 +291,4 @@ D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab09\Lab09\bin\Debug\net8.0\JetB
 D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab09\Lab09\bin\Debug\net8.0\X.PagedList.dll
 D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab09\Lab09\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
 D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab09\Lab09\obj\Debug\net8.0\Lab09.MvcApplicationPartsAssemblyInfo.cs
+D:\DEV2409GH-T2356\NguyenTuanAnh_T2356_ASP.NET\Lab09\Lab09\bin\Debug\net8.0\Serilog.dll

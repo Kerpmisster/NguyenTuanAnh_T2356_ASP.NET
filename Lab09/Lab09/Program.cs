@@ -1,4 +1,4 @@
-using Lab09.Models;
+﻿using Lab09.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,8 +10,14 @@ namespace Lab09
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("AppConnection");
 
+            // Cấu hình logging
+            builder.Logging.ClearProviders(); // Xóa các provider mặc định
+            builder.Logging.AddConsole(); // Ghi log ra Console
+            builder.Logging.AddDebug(); // Ghi log ra cửa sổ Debug
+            builder.Logging.SetMinimumLevel(LogLevel.Information); // Chỉ ghi từ mức Information trở lên
+
+            var connectionString = builder.Configuration.GetConnectionString("AppConnection");
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             //builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

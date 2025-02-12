@@ -83,7 +83,9 @@
                             <div class="product-card">
                                 <img src="@product.Image.Replace("/Images", "/Img")" alt="@product.Title" class="product-card-img" />
                                 <div class="product-card-content">
-                                    <h6><a href="/product/@product.Id">@product.Title</a></h6>
+                                    <h6>
+                                        <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id" class="text-decoration-none text-dark">@product.Title</a>
+                                    </h6>
                                     <p class="old-price">@string.Format("{0:#,##0}", @product.PriceOld) VND</p>
                                     <p class="new-price">@string.Format("{0:#,##0}", @product.PriceNew) VND</p>
                                 </div>

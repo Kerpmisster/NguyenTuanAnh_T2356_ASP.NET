@@ -1,163 +1,82 @@
 ﻿@model Lab09.Models.Product
+@using System.Text.RegularExpressions;
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = Model.Title;
     Layout = "~/Views/Shared/_Main.cshtml";
 }
 
-<h1>Details</h1>
+@functions {
+    public string StripHtml(string input)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cid)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cid)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Code)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Code)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd class = "col-sm-10">
-            <img src="@Model.Image.Replace("/Images", "/Img")" alt="@Model.Title" width="100" />
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaTitle)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaTitle)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaKeyword)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaKeyword)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.MetaDescription)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.MetaDescription)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Slug)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Slug)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PriceOld)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PriceOld)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PriceNew)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PriceNew)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Size)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Size)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Views)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Views)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Likes)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Likes)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Star)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Star)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Home)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Home)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Hot)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Hot)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UpdatedDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UpdatedDate)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AdminCreated)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AdminCreated)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.AdminUpdated)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.AdminUpdated)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Isdelete)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Isdelete)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+        // Loại bỏ tất cả các thẻ HTML
+        return Regex.Replace(input, "<.*?>", string.Empty);
+    }
+
+    public string DecodeHtml(string input)
+    {
+        return System.Web.HttpUtility.HtmlDecode(input);
+    }
+
+    public string Truncate(string input, int maxLength)
+    {
+        if (string.IsNullOrWhiteSpace(input))
+            return string.Empty;
+
+        if (input.Length <= maxLength)
+            return input;
+
+        return input.Substring(0, maxLength) + "...";
+    }
+}
+<div class="container-fluid mt-5">
+    <div class="card">
+        <div class="card-header bg-primary text-white">
+            <h3 class="card-title">Chi tiết sản phẩm</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="@Model.Image.Replace("/Images", "/Img")" alt="@Model.Title" class="img-fluid rounded shadow" style="width:23rem" />
+                </div>
+                <div class="col-md-6">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th class="bg-light">Tiêu đề</th>
+                                <td>@Html.DisplayFor(model => model.Title)</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Mô tả</th>
+                                <td> @Truncate(DecodeHtml(StripHtml(Model.Description)), 60)</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Nội dung</th>
+                                <td>@Truncate(DecodeHtml(StripHtml(Model.Content)), 60)</td></td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Giá cũ</th>
+                                <td class="text-decoration-line-through text-danger">@Html.DisplayFor(model => model.PriceOld)</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-light">Giá mới</th>
+                                <td class="text-success fw-bold">@Html.DisplayFor(model => model.PriceNew)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <div>
+                <a asp-controller="Carts" asp-action="Add" asp-route-id="@Model?.Id" class="btn btn-success">
+                    <i class="fi fi-bs-shopping-bag"></i> Thêm vào giỏ hàng
+                </a>
+                <a asp-action="Index" class="btn btn-info">Trở lại danh sách</a>
+            </div>
+        </div>
+    </div>
 </div>

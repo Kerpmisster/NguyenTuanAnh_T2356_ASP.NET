@@ -8,14 +8,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000">
-    @* <meta name="description" content="Web site created using create-react-app"> *@
     <link rel="apple-touch-icon" href="/logo192.png">
-    @* <link rel="manifest" href="/manifest.json"> *@
     <title>@ViewData["Title"] </title>
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/fonts.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Lab09.styles.css" asp-append-version="true" />
-    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" /> *@
     <link rel="shortcut icon" href="~/img/logo/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-bold-straight/css/uicons-bold-straight.css">
@@ -36,13 +33,14 @@
         <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
             <img class="logo" src="~/img/anhcat/logo.jpg" alt="logo" />
         </a>
+
         <nav class="navbar">
-            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Home") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index">Trang chủ</a>
-            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Introduction") ? "active" : "")" asp-area="" asp-controller="Introduction" asp-action="Index">Giới thiệu</a>
-            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Products") ? "active" : "")" asp-area="" asp-controller="Products" asp-action="Index">Sản phẩm</a>
-            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "News") ? "active" : "")" asp-area="" asp-controller="News" asp-action="Index">Tin tức</a>
-            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Partner") ? "active" : "")" asp-area="" asp-controller="Partners" asp-action="Index">Đối tác</a>
-            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Contact") ? "active" : "")" asp-area="" asp-controller="Contact" asp-action="Index">Liên hệ</a>
+            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Home") ? "active" : "")" asp-area="" asp-controller="Home" asp-action="Index" data-index="0">Trang chủ</a>
+            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Introduction") ? "active" : "")" asp-area="" asp-controller="Introduction" asp-action="Index" data-index="1">Giới thiệu</a>
+            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Products") ? "active" : "")" asp-area="" asp-controller="Products" asp-action="Index" data-index="2">Sản phẩm</a>
+            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "News") ? "active" : "")" asp-area="" asp-controller="News" asp-action="Index" data-index="3">Tin tức</a>
+            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Partners") ? "active" : "")" asp-area="" asp-controller="Partners" asp-action="Index" data-index="4">Đối tác</a>
+            <a class="link @((ViewContext.RouteData.Values["controller"]?.ToString() == "Contact") ? "active" : "")" asp-area="" asp-controller="Contact" asp-action="Index" data-index="5">Liên hệ</a>
         </nav>
 
         <div class="group-icon">
@@ -176,33 +174,51 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script>
-        $(document).ready(function () {
-            // Khi icon được click
-            $('.icon').on('click', function () {
-                $('.search-form').toggleClass('active');
-            });
-        });
+        // $(document).ready(function () {
+        //     // Khi icon được click
+        //     $('.icon').on('click', function () {
+        //         $('.search-form').toggleClass('active');
+        //     });
+        // });
             // Lấy phần tử nút scroll-to-top
-            const scrollTopButton = document.getElementById("scroll-top");
+        const scrollTopButton = document.getElementById("scroll-top");
 
             // Lắng nghe sự kiện cuộn trang
-            window.addEventListener("scroll", () => {
+        window.addEventListener("scroll", () => {
                 // Hiển thị nút khi người dùng cuộn xuống hơn 200px
-                if (window.scrollY > 200) {
+            if (window.scrollY > 200) {
                 scrollTopButton.classList.add("active");
-                } else {
+            } else {
                 scrollTopButton.classList.remove("active");
-                }
-            });
+            }
+        });
 
             // Thêm sự kiện click vào nút
-            scrollTopButton.addEventListener("click", () => {
+        scrollTopButton.addEventListener("click", () => {
                 // Cuộn mượt lên đầu trang
-                window.scrollTo({
-                    top: 0,
-                    behavior: "smooth",
-                });
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
             });
+        });
+
+        document.addEventListener("keydown", function (event) {
+            const links = document.querySelectorAll(".navbar .link");
+            const currentIndex = Array.from(links).findIndex(link => link.classList.contains("active"));
+
+            let newIndex;
+            if (event.key === "ArrowRight") {
+                // Chuyển sang trang tiếp theo
+                newIndex = (currentIndex + 1) % links.length;
+            } else if (event.key === "ArrowLeft") {
+                // Chuyển sang trang trước đó
+                newIndex = (currentIndex - 1 + links.length) % links.length;
+            }
+
+            if (newIndex !== undefined && newIndex !== currentIndex) {
+                window.location.href = links[newIndex].href;
+            }
+        });
     </script>
 </body>
 </html>

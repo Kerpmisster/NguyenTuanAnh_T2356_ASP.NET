@@ -1,0 +1,59 @@
+﻿@model Lab09.Models.Category
+
+@{
+    ViewData["Title"] = "Category";
+    Layout = "~/Views/Shared/_Main.cshtml";
+}
+
+<div class="box-content all-product">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="margin-top:20px">
+        <div class="carousel-inner">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/img/anhcat/trai-nghiem1.jpg" alt="" width="1100"
+                         height="500">
+                    <div class="carousel-btn"><button class="btn-buy">Mua ngay</button></div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/img/anhcat/banner.jpg" alt="" width="1100" height="500">
+                    <div class="carousel-btn"><button class="btn-buy">Mua ngay</button></div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden"></span>
+        </button>
+    </div>
+    <div class="all-product__item">
+        <div class="all-product__item--title">
+            <h4>@Model.Title</h4>
+        </div>
+        <div class="row bg-white">
+            @foreach (var product in Model.Products)
+            {
+                <div class="col-md-3 mb-3">
+                    <div class="product-card">
+                        <img src="@product.Image.Replace("/Images", "/Img")" alt="@product.Title" class="product-card-img" />
+                        <div class="product-card-content">
+                            <h6>
+                                <a asp-action="Details" asp-route-id="@product.Id" class="text-decoration-none text-dark">@product.Title</a>
+                            </h6>
+                            <p class="old-price">@string.Format("{0:#,##0}", @product.PriceOld) VND</p>
+                            <p class="new-price">@string.Format("{0:#,##0}", @product.PriceNew) VND</p>
+                        </div>
+                    </div>
+                    <div class="home-banner__btn">
+                        <a asp-controller="Cart" asp-action="Add" asp-route-id="@product.Id">
+                            <i class="fi fi-bs-shopping-bag"> &nbsp; Mua hàng</i>
+                        </a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

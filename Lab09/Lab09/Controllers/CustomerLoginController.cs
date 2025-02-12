@@ -27,7 +27,6 @@ namespace Lab09.Controllers
             return View();
         }
    
-
         [HttpPost]
         public IActionResult Registy(Customer model)
         {
@@ -51,6 +50,7 @@ namespace Lab09.Controllers
                 return RedirectToAction("Index");
             }
         }
+
         [HttpPost]
         public IActionResult Login(CustomerLogin model, string urlAction)
         {

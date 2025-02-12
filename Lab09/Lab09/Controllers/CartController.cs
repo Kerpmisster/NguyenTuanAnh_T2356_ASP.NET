@@ -38,30 +38,6 @@ namespace Lab09.Controllers
         }
         public IActionResult Add(int id)
         {
-            //var item = carts.FirstOrDefault(c => c.Id == id);
-            //if (item != null)
-            //{
-            //    item.Quantity += 1;
-            //}
-            //else
-            //{
-            //    var p = _context.Products.Find(id);
-            //    if (p == null)
-            //    {
-            //        return NotFound("Product not found.");
-            //    }
-
-            //    carts.Add(new Cart
-            //    {
-            //        Id = id,
-            //        Name = p.Title,
-            //        Price = p.PriceNew.Value,
-            //        Quantity = 1,
-            //        Image = p.Image,
-            //        Total = p.PriceNew.Value
-            //    });
-            //}
-            //HttpContext.Session.SetString("My-Cart", JsonConvert.SerializeObject(carts));
             // Kiểm tra nếu người dùng đã đăng nhập (session có chứa "Member")
             var member = HttpContext.Session.GetString("Member");
 
@@ -122,7 +98,7 @@ namespace Lab09.Controllers
                 }
                 HttpContext.Session.SetString("My-Cart", JsonConvert.SerializeObject(carts));
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Products");
         }
         public IActionResult Remove(int id)
         {

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q0izh6WyAG0=",
+  "dgSpecHash": "jzVK6eFrmMo=",
   "success": true,
   "projectFilePath": "D:\\DEV2409GH-T2356\\NguyenTuanAnh_T2356_ASP.NET\\Lab09\\Lab09\\Lab09.csproj",
   "expectedPackageFiles": [
@@ -147,6 +147,7 @@
     "C:\\Users\\aligh\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\aligh\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\aligh\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\aligh\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\aligh\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\aligh\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\aligh\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
